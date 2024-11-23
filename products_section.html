@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Packages</title>
+    <style>
+        :root {
+            --primary: #8B5CF6;
+            --primary-light: #A78BFA;
+            --text-light: #E2E8F0;
+            --background: #1A1A1A;
+            --card-bg: #262626;
+
+            /* Gradient */
+            --blue-gradient-bg: linear-gradient(to right, #4772C9, #ffff);
+            --blue-gradient-txt: transparent;
+
+            /* Colours*/
+            --core-section: #a0db8e;
+            --scale-section: #F09E2B;
+            --distributed-section: #7891FF;
+            --ultimate-section: #FF6262;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--background);
+            color: var(--text-light);
+            line-height: 1.5;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: inline-flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            background: var(--blue-gradient-bg);
+            color: var(--blue-gradient-txt);
+            background-clip: text;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+
+        .tab {
+            padding: 0.75rem 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+            font-size: 1rem;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        /* Customised colours */
+        .tab.active {
+        color: var(--tab-color);
+        border-bottom-color: var(--tab-color);
+        }
+
+        .tab[data-tab="core"].active {
+        --tab-color: var(--core-section);
+        }
+
+        .tab[data-tab="scale"].active {
+        --tab-color: var(--scale-section);
+        }
+
+        .tab[data-tab="distributed"].active {
+        --tab-color: var(--distributed-section);
+        }
+
+        .tab[data-tab="ultimate"].active {
+        --tab-color: var(--ultimate-section);
+        }
+
+        .tab-content {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            display: none;
+            text-align: center;
+        }
+
+        .tab-content.active {
+            display: inline-block;
+        }
+
+        .tab-content h2 {
+            margin-bottom: 1rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; 
+            padding: 20px;
+            list-style: none;
+        }
+
+        @media (max-width: 650px) {
+    .features {
+        grid-template-columns: 1fr; 
+        }
+    }
+
+        .features li {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .features li::before {
+            content: "✓";
+            margin-right: 10px;
+            color: var(--core-section);
+        }
+
+        .description {
+            color: #9CA3AF;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+        }
+
+        /* Did you know? */
+        .statWarning {
+            background-color: #333333;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .statWarning strong {
+            color: var(--ultimate-section);
+        }
+
+        /* Pricing */
+        .pricing-options {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .pricing-option {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            max-width: 250px;
+            margin: 10px;
+            padding: 10px;
+        }
+        .pricing-option h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .pricing-option p {
+            font-size: 12px;
+            color: #a0a0a0;
+            margin-bottom: 15px;
+        }
+        .price {
+            background: var(--blue-gradient-bg);
+            color: var(--blue-gradient-txt);
+            font-size: 30px;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        .btn {
+            border-radius: 15px;
+            background-color: transparent;
+            display: block;
+            width: 100%;
+            padding: 8px;
+            border: 1px solid gray;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            transition: all 300ms;
+        }
+        .btn:hover {
+            background: var(--blue-gradient-bg);
+            color: black;
+            border: 1px solid var(--card-bg);
+
+
+        }
+        .disclaimer {
+            font-size: 10px;
+            color: #707070;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #includesFeature {
+            color: var(--core-section);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>We offer several security packages<br>to ensure you get the best bang for your buck.</h1>
+        
+        <div class="tabs">
+            <button class="tab active" data-tab="core">Core</button>
+            <button class="tab" data-tab="scale">Scale</button>
+            <button class="tab" data-tab="distributed">Distributed</button>
+            <button class="tab" data-tab="ultimate">Ultimate</button>
+        </div>
+
+        <div class="tab-content active" id="core">
+            <p class="description">Simple but effective protections for your small business. Enjoy seamless navigation, mailing, and backups under the supervision of  AegisAI.</p>
+            <ul class="features">
+                <li>Access to centralised spam & junk mail system</li>
+                <li>Integrated real-time heuristic phishing detector</li>
+                <li>Daily Cloud Backups and one-click recovery</li>
+                <li>Weekly patches and security updates in our platform</li>
+                <li>24/7 Availability of our social engineering experts</li>
+                <li> Access to centralised compromised and malicious website database</li>
+            </ul>
+
+            <div class="statWarning">
+                <h3>Did you know?</h3>
+                <p><strong>Nearly 70%</strong> of malicious attacks are executed through social engineering techniques. The most common ones are phishing and spear phishing.</p>
+            </div>
+
+            <!-- Pricing -->
+            <div class="pricing"> 
+                    <div class="pricing-options">
+                        <div class="pricing-option">
+                            <h3>Demo</h3>
+                            <h4 class="price">€0/month</h4>
+                            <p>Try out how things workfor free! No credit card needed for automatic renewal.</p>
+                            <button class="btn">Try now</button>
+                        </div>
+                        <div class="pricing-option">
+                            <h3>Yearly</h3>
+                            <h4 class="price">€63/year</h4>
+                            <p>Enjoy 12 months of service at the price of 9. This is our most popular plan.</p>
+                            <button class="btn">Get Started</button>
+                        </div>
+                        <div class="pricing-option">
+                            <h3>Monthly</h3>
+                            <h4 class="price">€7/month</h4>
+                            <p>Cancel anytime, no hidden charges. You'll still have access to your tools long enough.</p>
+                            <button class="btn">Get Started</button>
+                        </div>
+                    </div>
+                    <p class="disclaimer">All prices are tax-exclusive. Charges are non-refundable under normal circumstances. If you would like to undertake a request for quotation, please contact sales@gridrunner.net</p>
+                </div>
+        </div>
+
+        <div class="tab-content" id="scale">
+            <p class="description">Looking to expand the capacity and complexity of your business? We've got you covered. Our Scale Package will increase the robustness of your infraestructure along its capacity. </p>
+            <ul class="features">
+                <li id="includesFeature">Everything in Core</li>
+                <li>Advanced Firewall</li>
+                <li>Cloud Protection</li>
+                <li>Daily Backups</li>
+            </ul>
+        </div>
+
+        <div class="tab-content" id="distributed">
+            <p class="description">Specialized network and endpoint protection systems that ensure seamless integration.</p>
+            <ul class="features">
+                <li>Everything in Scale</li>
+                <li>Enterprise Firewall</li>
+                <li>Custom Solutions</li>
+                <li>Priority Support</li>
+                <li>Hourly Backups</li>
+            </ul>
+        </div>
+
+        <div class="tab-content" id="ultimate">
+            <p class="description">Our most advanced tools to ensure maximum protection for important data.</p>
+            <ul class="features">
+                <li>Everything in Distributed</li>
+                <li>AI-Powered Security</li>
+                <li>Zero-Trust Architecture</li>
+                <li>Real-time Backups</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and contents
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
