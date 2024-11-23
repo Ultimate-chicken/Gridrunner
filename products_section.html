@@ -14,6 +14,7 @@
 
             /* Gradient */
             --blue-gradient-bg: linear-gradient(to right, #4772C9, #ffff);
+            --ultimate-gradient-bg: linear-gradient(to right, #F09E2B, #7891FF);
             --blue-gradient-txt: transparent;
 
             /* Colours*/
@@ -111,9 +112,8 @@
         }
 
         .features {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr; 
             padding: 20px;
+            display: inline-block;
             list-style: none;
         }
 
@@ -214,6 +214,12 @@
             color: var(--core-section);
         }
 
+        #includesFeatures {
+            background: var(--ultimate-gradient-bg);
+            color: var(--blue-gradient-txt);
+            background-clip: text;
+        }
+
     </style>
 </head>
 <body>
@@ -228,7 +234,7 @@
         </div>
 
         <div class="tab-content active" id="core">
-            <p class="description">Simple but effective protections for your small business. Enjoy seamless navigation, mailing, and backups under the supervision of  AegisAI.</p>
+            <p class="description">Simple but effective protections for your small business or for yourself. Enjoy seamless navigation, mailing, and backups under the supervision of  AegisAI.</p>
             <ul class="features">
                 <li>Access to centralised spam & junk mail system</li>
                 <li>Integrated real-time heuristic phishing detector</li>
@@ -249,23 +255,23 @@
                         <div class="pricing-option">
                             <h3>Demo</h3>
                             <h4 class="price">€0/month</h4>
-                            <p>Try out how things workfor free! No credit card needed for automatic renewal.</p>
+                            <p>Try out how things workfor free! No automatic renewal.</p>
                             <button class="btn">Try now</button>
                         </div>
                         <div class="pricing-option">
                             <h3>Yearly</h3>
-                            <h4 class="price">€63/year</h4>
+                            <h4 class="price">€36/year</h4>
                             <p>Enjoy 12 months of service at the price of 9. This is our most popular plan.</p>
                             <button class="btn">Get Started</button>
                         </div>
                         <div class="pricing-option">
                             <h3>Monthly</h3>
-                            <h4 class="price">€7/month</h4>
-                            <p>Cancel anytime, no hidden charges. You'll still have access to your tools long enough.</p>
+                            <h4 class="price">€4/month</h4>
+                            <p>Cancel anytime. No hidden charges. No conpromises.</p>
                             <button class="btn">Get Started</button>
                         </div>
                     </div>
-                    <p class="disclaimer">All prices are tax-exclusive. Charges are non-refundable under normal circumstances. If you would like to undertake a request for quotation, please contact sales@gridrunner.net</p>
+                    <p class="disclaimer">All prices are tax-inclusive and apply to a single device. Charges are non-refundable under normal circumstances. If you would like to undertake a request for quotation, please contact sales@gridrunner.net</p>
                 </div>
         </div>
 
@@ -273,31 +279,125 @@
             <p class="description">Looking to expand the capacity and complexity of your business? We've got you covered. Our Scale Package will increase the robustness of your infraestructure along its capacity. </p>
             <ul class="features">
                 <li id="includesFeature">Everything in Core</li>
-                <li>Advanced Firewall</li>
-                <li>Cloud Protection</li>
-                <li>Daily Backups</li>
+                <li>Access to our distributed Anti-DDos network, including traffic filtration and load balancing</li>
+                <li>Guaranteed HIPAA, GDPR, and PCI-DSS compliance, advised by our team of legal consultants.</li>
+                <li>Expert guidance on ongoing incident response and business continuity planning</li>
+                <li>AI-powered anti-ransomware tools, including signature heuristics and file scanning </li>
             </ul>
+
+            <div class="statWarning">
+                <h3>Did you know?</h3>
+                <p> Due to limited knowledge and expertise, SMEs are more vulnerable to cyberattacks. A report by Barracuda Networks found that SMEs are <strong>Nearly 350%</strong> more likely to be a victim of social engineering attacks.</p>
+            </div>
+
+            <!-- Pricing -->
+            <div class="pricing"> 
+                <div class="pricing-options">
+                    <div class="pricing-option">
+                        <h3>Demo</h3>
+                        <h4 class="price">€0/month</h4>
+                        <p>Try out how things work for free! No automatic renewal. </p>
+                        <button class="btn">Try now</button>
+                    </div>
+                    <div class="pricing-option">
+                        <h3>Yearly</h3>
+                        <h4 class="price">€54/year</h4>
+                        <p>Enjoy 12 months of service at the price of 9. This is our most popular plan.</p>
+                        <button class="btn">Get Started</button>
+                    </div>
+                    <div class="pricing-option">
+                        <h3>Monthly</h3>
+                        <h4 class="price">€6/month</h4>
+                        <p>Cancel anytime. No hidden charges. No compromises </p>
+                        <button class="btn">Get Started</button>
+                    </div>
+                </div>
+                <p class="disclaimer">All prices are tax-inclusive and apply to a single device. Charges are non-refundable under normal circumstances. If you would like to undertake a request for quotation, please contact sales@gridrunner.net</p>
+            </div>
+
         </div>
 
         <div class="tab-content" id="distributed">
-            <p class="description">Specialized network and endpoint protection systems that ensure seamless integration.</p>
+            <p class="description">Robust infraestructure to ensure data integrity and confidentiality within your remote and distributed teams. Enjoy the calm with our specialised network and endpoint protection systems. </p>
             <ul class="features">
-                <li>Everything in Scale</li>
-                <li>Enterprise Firewall</li>
-                <li>Custom Solutions</li>
-                <li>Priority Support</li>
-                <li>Hourly Backups</li>
+                <li id="includesFeature">Everything in Core</li>
+                <li>Real-time behavioural analysis and threat monitoring, powered by AegisAI</li>
+                <li>Strict enforcement of identity management and authentification</li>
+                <li>Integrated VPN and packet encryption against man-in-the-middle attacks</li>
+                <li>Detailed logs and reports of user actions for digital forensics</li>
             </ul>
+
+            <div class="statWarning">
+                <h3>Did you know?</h3>
+                <p> According to the 2020 Cost of Data breach report, <strong>Nearly 70%</strong> of businesses believed that remote work would increase the cost and time required to deal with data breaches. </p>
+            </div>
+
+            <!-- Pricing -->
+            <div class="pricing"> 
+                <div class="pricing-options">
+                    <div class="pricing-option">
+                        <h3>Demo</h3>
+                        <h4 class="price">€0/month</h4>
+                        <p>Try out how things workfor free! No automatic renewal. </p>
+                        <button class="btn">Try now</button>
+                    </div>
+                    <div class="pricing-option">
+                        <h3>Yearly</h3>
+                        <h4 class="price">€72/year</h4>
+                        <p>Enjoy 12 months of service at the price of 9. This is our most popular plan.</p>
+                        <button class="btn">Get Started</button>
+                    </div>
+                    <div class="pricing-option">
+                        <h3>Monthly</h3>
+                        <h4 class="price">€8/month</h4>
+                        <p>Cancel anytime. no hidden charges. No compromises </p>
+                        <button class="btn">Get Started</button>
+                    </div>
+                </div>
+                <p class="disclaimer">All prices are tax-inclusive and apply to one single device. Charges are non-refundable under normal circumstances. If you would like to undertake a request for quotation, please contact sales@gridrunner.net</p>
+            </div>
+
         </div>
 
         <div class="tab-content" id="ultimate">
-            <p class="description">Our most advanced tools to ensure maximum protection for important data.</p>
+            <p class="description">Our most advanced tools to ensure maximum protection and calm. Enjoy industry-leading solutions at an affordable price.</p>
             <ul class="features">
-                <li>Everything in Distributed</li>
-                <li>AI-Powered Security</li>
-                <li>Zero-Trust Architecture</li>
-                <li>Real-time Backups</li>
+                <li id="includesFeatures">Everything in Scale and Distributed </li>
+                <li>AegisAI-powered vulnerability scanning, including zero-day exploits and rootkits </li>
+                <li>Weekly security assesments and penetration testing by our ethical hackers division</li>
+                <li>Establishment of data access and exfiltration prevention systems against insider threats </li>
             </ul>
+
+            <div class="statWarning">
+                <h3>Did you know?</h3>
+                <p> According to the 2020 Cost of Insider threats report, it takes an average of <strong>77 days</strong> to detect, investigate, and contain an insider threat. </p>
+            </div>
+
+            <!-- Pricing -->
+            <div class="pricing"> 
+                <div class="pricing-options">
+                    <div class="pricing-option">
+                        <h3>Demo</h3>
+                        <h4 class="price">€0/month</h4>
+                        <p>Try out how things work for free! No automatic renewal.</p>
+                        <button class="btn">Try now</button>
+                    </div>
+                    <div class="pricing-option">
+                        <h3>Yearly</h3>
+                        <h4 class="price">€108/year</h4>
+                        <p>Enjoy 12 months of service at the price of 9. This is our most popular plan.</p>
+                        <button class="btn">Get Started</button>
+                    </div>
+                    <div class="pricing-option">
+                        <h3>Monthly</h3>
+                        <h4 class="price">€12/month</h4>
+                        <p>Cancel anytime. no hidden charges. No compromises. </p>
+                        <button class="btn">Get Started</button>
+                    </div>
+                </div>
+                <p class="disclaimer">All prices are tax-inclusive and apply to a single device. Charges are non-refundable under normal circumstances. If you would like to undertake a request for quotation, please contact sales@gridrunner.net</p>
+            </div>
+
         </div>
     </div>
 
