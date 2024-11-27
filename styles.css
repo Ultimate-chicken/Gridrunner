@@ -370,6 +370,42 @@ px solid currentColor;
     color: white;
 }
 
+/* Comparison table */
+table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #833434;
+    color: white;
+    font-size: 18px;
+}
+
+table tbody tr td:first-child {
+max-width: 250px;
+}
+
+td {
+    font-size: 16px;
+    color: #333;
+}
+
+td.checkmark {
+    font-size: 22px;
+    color: #28a745;
+}
+
 /* Red "what's next" text */
 .highlight {
     color: red;
@@ -421,6 +457,12 @@ px solid currentColor;
     }
 
     /* General configs */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     body {
         scroll-behavior: smooth;
         font-family: system-ui, -apple-system, sans-serif;
@@ -794,41 +836,105 @@ px solid currentColor;
             border: 1px solid var(--blue-bg);
         }
 
-/* Comparison table */
-       table {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            border-collapse: collapse;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: #ffffff;
+        /* Demo page */
+        .demo-container {
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
         }
 
-        th, td {
-            padding: 15px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #833434;
+        .left-panel {
+            flex: 1;
+            background-color: #660000;
+            padding: 40px;
             color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .left-panel h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .left-panel p {
             font-size: 18px;
+            line-height: 1.6;
+            color: white;
         }
 
-        table tbody tr td:first-child {
-        max-width: 250px;
+        .right-panel {
+            flex: 1;
+            background-color: #F3F6F4;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow-y: auto;
         }
 
-        td {
+        .right-panel h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 500px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
             font-size: 16px;
             color: #333;
         }
 
-        td.checkmark {
-            font-size: 22px;
-            color: #28a745;
+        .form-container button {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #660000;
+            color: #660000;
+            background-color: transparent;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
         }
+
+        .form-container button:hover {
+            background-color: #660000;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .demo-container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .left-panel, .right-panel {
+                flex: none;
+                width: 100%;
+            }
+
+            .form-container {
+                padding: 15px;
+            }
+        }
+
 /* Footer */
 footer {
 background-color: var(--black-bg);
