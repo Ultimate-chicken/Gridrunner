@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const indicator = document.querySelector('.main-header .indicator');
     const tabItems = document.querySelectorAll('.tab-item');
     const tabPanes = document.querySelectorAll('.tab-pane');
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
 
 
     // Ensure all critical elements exist
@@ -177,5 +179,34 @@ tabItems.forEach((item, index) => {
       tabPanes[index].classList.add('active');
     });
   });
+
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const tabId = button.getAttribute('data-tab');
+        
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        button.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+    });
+});
+
+// Mobile menu functionality
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenuBtn.addEventListener('click', () => {
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+});
+
+// Adjust mobile menu display on window resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        navLinks.style.display = 'flex';
+    } else {
+        navLinks.style.display = 'none';
+    }
+});
 
 });

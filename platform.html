@@ -1,306 +1,264 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gridrunner Platform - Advanced Cybersecurity Solutions</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>Gridrunner</title>
+    <link rel="stylesheet" href="main_styles.css">
 </head>
 <body>
-    <header class="main-header">
-        <nav>
-            <a href="index.html" class="logo"><b> GRIDRUNNER</b></a>
-            <a href="platform.html" class="nav-link">Platform</a>
-            <a href="products.html" class="nav-link">Products</a>
-            <a href="partners.html" class="nav-link">Partners</a>
-            <a href="company.html" class="nav-link">Company</a>
-            <button class="btn btn-secondary">GET DEMO</button>
-        </nav>
-</header>
+    <header id="initial-header" class="initial-header">
+        <div class="container">
+            <a href="#" class="logo">GRIDRUNNER</a>
+            <nav>
+                <a href="platform.html" class="nav-link">PLATFORM</a>
+                <a href="products.html" class="nav-link">PRODUCTS</a>
+                <a href="partners.html" class="nav-link">PARTNERS</a>
+                <a href="#" class="nav-link">COMPANY</a>
+            </nav>
+        </div>
+    </header>
 
+    <!-- Main Content -->
     <main>
-        <section id="platform-hero" class="hero section">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Gridrunner Platform</h1>
-                    <p>Secure your digital assets with our comprehensive cybersecurity solution</p>
-                    <button class="btn btn-primary">Get Started</button>
-                </div>
-                <div class="hero-image">
-                    <img src="https://via.placeholder.com/500x300" alt="Gridrunner Platform">
+        <!-- Hero Section -->
+        <section class="gr-hero">
+            <div class="gr-container">
+                <h1>Gridrunner Platform: Comprehensive Cybersecurity Solution</h1>
+                <p>Empower your organization with our cutting-edge, AI-driven cybersecurity platform designed to detect and neutralize threats before they impact your systems.</p>
+                <div class="gr-cta-buttons">
+                    <button class="gr-btn gr-btn-primary">Request a Demo</button>
                 </div>
             </div>
         </section>
 
-        <section id="platform-features" class="platform section">
-            <div class="container">
-                <h2>Our Platform Features</h2>
-                <div id="feature-accordion" class="accordion">
-                    <div class="accordion-item" data-feature="network">
-                        <div class="accordion-header">
-                            <i data-lucide="shield" class="icon"></i>
-                            <h3>Network Security</h3>
-                        </div>
-                        <div class="accordion-content">
-                            <p>Shield your business from cyber threats with cutting-edge network security! Our powerful solutions safeguard your data, block hackers, and ensure seamless connectivity—all while giving you peace of mind.</p>
-                            <div class="feature-stats">
-                                <div class="stat-item">
-                                    <div class="stat-value">95%</div>
-                                    <div class="stat-label">Threats Blocked</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-value">100%</div>
-                                    <div class="stat-label">Network Coverage</div>
-                                </div>
-                            </div>
-                            <button class="btn btn-outline">Learn More →</button>
-                        </div>
+        <!-- Features Section -->
+        <section class="gr-features">
+            <div class="gr-container">
+                <h2>Key Platform Features</h2>
+                <div class="gr-feature-grid">
+                    <div class="gr-feature-card">
+                        <img src="shield-icon.png" alt="Shield Icon" class="gr-feature-icon">
+                        <h3>Advanced Threat Detection</h3>
+                        <p>Utilize AI and machine learning to identify and neutralize threats in real time.</p>
                     </div>
-                    <div class="accordion-item" data-feature="cloud">
-                        <div class="accordion-header">
-                            <i data-lucide="cloud" class="icon"></i>
-                            <h3>Code to Cloud™</h3>
-                        </div>
-                        <div class="accordion-content">
-                            <p>Transform your operations with secure cloud infrastructure. Deploy, manage, and scale your applications with confidence. Our cloud security solutions provide end-to-end protection for your cloud-native applications.</p>
-                            <div class="feature-stats">
-                                <div class="stat-item">
-                                    <div class="stat-value">10k+</div>
-                                    <div class="stat-label">Cloud Apps Protected</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-value">-60%</div>
-                                    <div class="stat-label">Deployment Time</div>
-                                </div>
-                            </div>
-                            <button class="btn btn-outline">Learn More →</button>
-                        </div>
+                    <div class="gr-feature-card">
+                        <img src="secure-icon.png" alt="Secure Icon" class="gr-feature-icon">
+                        <h3>Data Protection</h3>
+                        <p>Ensure your data is safe with state-of-the-art encryption technologies.</p>
                     </div>
-                    <div class="accordion-item" data-feature="ai">
-                        <div class="accordion-header">
-                            <i data-lucide="brain" class="icon"></i>
-                            <h3>AI-Driven Security Operations</h3>
-                        </div>
-                        <div class="accordion-content">
-                            <p>Transform your operations with AegisAI, the smart solution for a greener future. Harness the power of AI to optimize resources, reduce waste, and lower your carbon footprint—all while boosting efficiency.</p>
-                            <div class="feature-stats">
-                                <div class="stat-item">
-                                    <div class="stat-value">99.9%</div>
-                                    <div class="stat-label">Threats Detected</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-value">&lt;1min</div>
-                                    <div class="stat-label">Response Time</div>
-                                </div>
-                            </div>
-                            <button class="btn btn-outline">Learn More →</button>
-                        </div>
+                    <div class="gr-feature-card">
+                        <img src="cloud-icon.png" alt="Cloud Icon" class="gr-feature-icon">
+                        <h3>Cloud Integration</h3>
+                        <p>Seamlessly integrate with popular cloud services for enhanced scalability.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="integrations" class="integrations section">
-            <div class="container">
-                <h2>Seamless Integrations</h2>
-                <p>Gridrunner integrates with your favorite tools to provide a unified security experience.</p>
-                <div class="integration-logos">
-                    <img src="https://via.placeholder.com/100x100" alt="Slack" class="integration-logo">
-                    <img src="https://via.placeholder.com/100x100" alt="Jira" class="integration-logo">
-                    <img src="https://via.placeholder.com/100x100" alt="GitHub" class="integration-logo">
-                    <img src="https://via.placeholder.com/100x100" alt="AWS" class="integration-logo">
-                    <img src="https://via.placeholder.com/100x100" alt="Azure" class="integration-logo">
-                    <img src="https://via.placeholder.com/100x100" alt="Google Cloud" class="integration-logo">
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="testimonials section">
-            <div class="container">
-                <h2>What Our Clients Say</h2>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <p>"Gridrunner has transformed our security operations. We've seen a 70% reduction in incident response time."</p>
-                        <div class="testimonial-author">
-                            <img src="https://via.placeholder.com/50x50" alt="Jane Doe" class="author-avatar">
-                            <div class="author-info">
-                                <h4>Jane Doe</h4>
-                                <p>CISO, Tech Corp</p>
-                            </div>
-                        </div>
+        <!-- Modules Section -->
+        <section class="gr-modules">
+            <div class="gr-container">
+                <h2>Modules Tailored to Your Needs</h2>
+                <p>Customize your cybersecurity approach with modules designed for flexibility and precision.</p>
+                <div class="gr-module-grid">
+                    <div class="gr-module-card">
+                        <h3>Incident Response</h3>
+                        <p>Handle incidents swiftly and minimize downtime.</p>
                     </div>
-                    <div class="testimonial-card">
-                        <p>"The AI-driven threat detection is a game-changer. It's like having an army of security experts working 24/7."</p>
-                        <div class="testimonial-author">
-                            <img src="https://via.placeholder.com/50x50" alt="John Smith" class="author-avatar">
-                            <div class="author-info">
-                                <h4>John Smith</h4>
-                                <p>Head of IT, Global Bank</p>
-                            </div>
-                        </div>
+                    <div class="gr-module-card">
+                        <h3>Vulnerability Management</h3>
+                        <p>Proactively identify and fix system vulnerabilities.</p>
                     </div>
-                    <div class="testimonial-card">
-                        <p>"Implementing Gridrunner was seamless. The support team was exceptional throughout the entire process."</p>
-                        <div class="testimonial-author">
-                            <img src="https://via.placeholder.com/50x50" alt="Alice Johnson" class="author-avatar">
-                            <div class="author-info">
-                                <h4>Alice Johnson</h4>
-                                <p>CTO, E-commerce Giant</p>
-                            </div>
-                        </div>
+                    <div class="gr-module-card">
+                        <h3>Network Security</h3>
+                        <p>Protect your network with layered defenses.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="comparison" class="comparison section">
-            <div class="container">
-                <h2>Compare Plans</h2>
+    <section id="testimonials" class="testimonials section">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"Gridrunner has transformed our security operations. We've seen a 70% reduction in incident response time."</p>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/50x50" alt="Jane Doe" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Jane Doe</h4>
+                            <p>CISO, Tech Corp</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The AI-driven threat detection is a game-changer. It's like having an army of security experts working 24/7."</p>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/50x50" alt="John Smith" class="author-avatar">
+                        <div class="author-info">
+                            <h4>John Smith</h4>
+                            <p>Head of IT, Global Bank</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Implementing Gridrunner was seamless. The support team was exceptional throughout the entire process."</p>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/50x50" alt="Alice Johnson" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Alice Johnson</h4>
+                            <p>CTO, E-commerce Giant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="comparison" class="comparison section">
+        <div class="container">
+            <h2>Compare Plans</h2>
 <table>
-        <thead>
-            <tr>
-                <th>Feature</th>
-                <th>Core</th>
-                <th>Scale</th>
-                <th>Distributed</th>
-                <th>Ultimate</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Access to centralised spam & junk mail system</td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-            </tr>
-            <tr>
-                <td>Integrated real-time heuristic phishing detector</td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-            </tr>
-            <tr>
-                <td>Daily Cloud Backups and one-click recovery</td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-            </tr>
-            <tr>
-                <td>Weekly patches and security updates in our platform</td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-            </tr>
-            <tr>
-                <td>24/7 Availability of our social engineering experts</td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-            </tr>
-            <tr>
-                <td>Access to centralised compromised and malicious website database</td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-            </tr>
-            <tr>
-                <td>Access to our distributed Anti-DDos network, including traffic filtration and load balancing</td>
-                <td class="blank"></td>
-                <td class="checkmark">✓</td>
-                <td class="blank"></td>
-                <td class="checkmark">✓</td>
-            </tr>
-            <tr>
-                <td>Guaranteed HIPAA, GDPR, and PCI-DSS compliance, advised by our team of legal consultants</td>
-                <td class="blank"></td>
-                <td class="checkmark">✓</td>
-                <td class="blank"></td>
-                <td class="checkmark">✓</td>
-            </tr>
-            <tr>
-                <td>Expert guidance on ongoing incident response and business continuity planning</td>
-                <td class="blank"></td>
-                <td class="checkmark">✓</td>
-                <td class="blank"></td>
-                <td class="checkmark">✓</td>
-            </tr>
-            <tr>
-                <td>AI-powered anti-ransomware tools, including signature heuristics and file scanning</td>
-                <td class="blank"></td>
-                <td class="checkmark">✓</td>
-                <td class="blank"></td>
-                <td class="checkmark">✓</td>
-            </tr>
-            <tr>
-                <td>Real-time behavioural analysis and threat monitoring, powered by AegisAI</td>
-                <td class="blank"></td>
-                <td class="blank"></td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-            </tr>
-            <tr>
-                <td>Strict enforcement of identity management and authentication</td>
-                <td class="blank"></td>
-                <td class="blank"></td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-            </tr>
-            <tr>
-                <td>Integrated VPN and packet encryption against man-in-the-middle attacks</td>
-                <td class="blank"></td>
-                <td class="blank"></td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-            </tr>
-            <tr>
-                <td>Detailed logs and reports of user actions for digital forensics</td>
-                <td class="blank"></td>
-                <td class="blank"></td>
-                <td class="checkmark">✓</td>
-                <td class="checkmark">✓</td>
-            </tr>
-        </tbody>
-    </table>
+    <thead>
+        <tr>
+            <th>Feature</th>
+            <th>Core</th>
+            <th>Scale</th>
+            <th>Distributed</th>
+            <th>Ultimate</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Access to centralised spam & junk mail system</td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+        </tr>
+        <tr>
+            <td>Integrated real-time heuristic phishing detector</td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+        </tr>
+        <tr>
+            <td>Daily Cloud Backups and one-click recovery</td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+        </tr>
+        <tr>
+            <td>Weekly patches and security updates in our platform</td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+        </tr>
+        <tr>
+            <td>24/7 Availability of our social engineering experts</td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+        </tr>
+        <tr>
+            <td>Access to centralised compromised and malicious website database</td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+        </tr>
+        <tr>
+            <td>Access to our distributed Anti-DDos network, including traffic filtration and load balancing</td>
+            <td class="blank"></td>
+            <td class="checkmark">✓</td>
+            <td class="blank"></td>
+            <td class="checkmark">✓</td>
+        </tr>
+        <tr>
+            <td>Guaranteed HIPAA, GDPR, and PCI-DSS compliance, advised by our team of legal consultants</td>
+            <td class="blank"></td>
+            <td class="checkmark">✓</td>
+            <td class="blank"></td>
+            <td class="checkmark">✓</td>
+        </tr>
+        <tr>
+            <td>Expert guidance on ongoing incident response and business continuity planning</td>
+            <td class="blank"></td>
+            <td class="checkmark">✓</td>
+            <td class="blank"></td>
+            <td class="checkmark">✓</td>
+        </tr>
+        <tr>
+            <td>AI-powered anti-ransomware tools, including signature heuristics and file scanning</td>
+            <td class="blank"></td>
+            <td class="checkmark">✓</td>
+            <td class="blank"></td>
+            <td class="checkmark">✓</td>
+        </tr>
+        <tr>
+            <td>Real-time behavioural analysis and threat monitoring, powered by AegisAI</td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+        </tr>
+        <tr>
+            <td>Strict enforcement of identity management and authentication</td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+        </tr>
+        <tr>
+            <td>Integrated VPN and packet encryption against man-in-the-middle attacks</td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+        </tr>
+        <tr>
+            <td>Detailed logs and reports of user actions for digital forensics</td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="checkmark">✓</td>
+            <td class="checkmark">✓</td>
+        </tr>
+    </tbody>
+</table>
 
-    <button class="blue-btn">Explore all options</button>
-            </div>
-        </section>
+<section id="cta" class="cta section">
+    <div class="container">
+        <h2>Ready to secure your digital assets?</h2>
+        <p>Get started with Gridrunner today and experience unparalleled cybersecurity protection.</p>
+        <button class="btn btn-primary">Get Started</button>
+        <button class="btn btn-secondary">Contact Sales</button>
+    </div>
+</section>
 
-        <section id="cta" class="cta section">
-            <div class="container">
-                <h2>Ready to secure your digital assets?</h2>
-                <p>Get started with Gridrunner today and experience unparalleled cybersecurity protection.</p>
-                <button class="btn btn-primary">Get Started</button>
-                <button class="btn btn-secondary">Contact Sales</button>
-            </div>
-        </section>
-    </main>
+</main>
 
-   <footer>
-            <div class="footerContainer">
-                <div class="footerItem">
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <a href="terms-and-conditions.html">Terms and Conditions</a>
-                    <a href="contact.html">Contact us</a>
-                </div>
-                <div class="footerItem">
-                    <a href="#">LinkedIn <img src="images/linkedin.svg" width="10px"/></a> 
-                    <a href="#">Discord <img src="images/discord.svg" width="10px"/></a>
-                    <a href="#">YouTube <img src="images/youtube.svg" width="10px"/></a>
-            </div></div>
-            <div class="copyright">
-                Copyright © 2024 Gridrunner. All Rights Reserved
-            </div> 
-        </footer>
-
-    <script src="script.js"></script>
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="#">Privacy</a>
+            <a href="#">Cookies</a>
+            <a href="#">Contact us</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i data-lucide="instagram"></i></a>
+            <a href="#"><i data-lucide="twitter"></i></a>
+            <a href="#"><i data-lucide="linkedin"></i></a>
+        </div>
+    </div>
+    <div class="copyright">
+        Copyright © 2024 Gridrunner. All Rights Reserved
+    </div>
+</footer>
+<script src="script.ts"></script>
 </body>
-</html>
 
+</html>
