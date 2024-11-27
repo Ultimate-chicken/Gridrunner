@@ -792,6 +792,41 @@ px solid currentColor;
             border: 1px solid var(--blue-bg);
         }
 
+/* Comparison table */
+       table {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #833434;
+            color: white;
+            font-size: 18px;
+        }
+
+        table tbody tr td:first-child {
+        max-width: 250px;
+        }
+
+        td {
+            font-size: 16px;
+            color: #333;
+        }
+
+        td.checkmark {
+            font-size: 22px;
+            color: #28a745;
+        }
 /* Footer */
 footer {
 background-color: var(--black-bg);
