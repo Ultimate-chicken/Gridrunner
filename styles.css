@@ -804,6 +804,7 @@ px solid currentColor;
     width: 100%;
     justify-content: center;
     color: white;
+    background-color: var(--black-bg);
 }
 
 .footerContainer a {
