@@ -472,7 +472,7 @@ px solid currentColor;
             width: 100%;
             justify-content: center;
             padding: 15px 0px;
-            background: linear-gradient(to bottom, rgba(26,26,26,1) 90%, rgba(102,0,0,1));
+            background: linear-gradient(to bottom, #000 90%, rgba(102,0,0,1));
             position: sticky;
             top: 0;
             z-index: 10;
