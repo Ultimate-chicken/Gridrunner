@@ -1,5 +1,83 @@
 /* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+.initial-header, .main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.initial-header .container, .main-header .container {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    position: relative;
+}
+
+/* Ensure both headers use the same centering technique */
+.initial-header nav, .main-header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.initial-header nav a, .main-header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px; /* Adds spacing between nav items */
+    font-size: 14px;
+}
+
+/* Logo alignment */
+.initial-header .logo, .main-header .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: left;
+    margin-left: 20px; /* Optional: spacing from the left edge */
+}
+
+.main-header {
+    transform: translateY(-100%);
+}
+
+.main-header .indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: red;
+    transition: left 0.3s ease, width 0.3s ease;
+}
 
 .btn {
     padding: 10px 20px;
@@ -8,12 +86,14 @@
     cursor: pointer;
     font-size: 14px;
     font-weight: bold;
-}
+    text-decoration: none;
+  }
+  
 
-.btn-primary {
+  .btn-primary {
     background-color: #f00;
     color: #fff;
-}
+  }
 
 .btn-secondary {
     background-color: #fff;
@@ -22,8 +102,7 @@
 
 .btn-outline {
     background-color: transparent;
-    border: 1
-px solid currentColor;
+    border: 1px solid currentColor;
     color: inherit;
 }
 
@@ -57,7 +136,7 @@ px solid currentColor;
 }
 
 .animated-text {
-    font-size: 24px;
+    font-size: 48px;
     margin-bottom: 20px;
 }
 
@@ -121,7 +200,7 @@ px solid currentColor;
 }
 
 .accordion-item {
-    border: 1px solid #333;
+    border: 10px solid #333;
     margin-bottom: 10px;
 }
 
@@ -166,6 +245,46 @@ px solid currentColor;
     background-color: #f00;
     color: #fff;
     text-align: center;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
 }
 
 /* Responsive design */
@@ -305,15 +424,16 @@ px solid currentColor;
 
 /* Hero section modifications */
 .hero h1 {
-    font-size: 64px; /* Larger title font */
+    font-size: 64px;
 }
 
 #animated-text {
     transition: opacity 0.5s ease;
 }
 
-/* Excellence section centered text and red line */
+/* Excellence section centered text */
 .excellence-title {
+    font-size: larger;
     margin-bottom: 30px;
 }
 
@@ -370,42 +490,6 @@ px solid currentColor;
     color: white;
 }
 
-/* Comparison table */
-table {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    border-collapse: collapse;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-}
-
-th, td {
-    padding: 15px;
-    text-align: center;
-    border: 1px solid #ddd;
-}
-
-th {
-    background-color: #833434;
-    color: white;
-    font-size: 18px;
-}
-
-table tbody tr td:first-child {
-max-width: 250px;
-}
-
-td {
-    font-size: 16px;
-    color: #333;
-}
-
-td.checkmark {
-    font-size: 22px;
-    color: #28a745;
-}
-
 /* Red "what's next" text */
 .highlight {
     color: red;
@@ -413,16 +497,16 @@ td.checkmark {
 
 .hero-content .subtitle {
     display: block;
-    font-size: 1.5rem; /* Smaller font for 'Simply' */
-    font-weight: normal;
-    margin-top: 0.2rem;
-    color: #666; /* Optional: Light gray color */
+    font-size: 3rem; /* Smaller font for 'Simply' */
+    font-weight: bold;
+    margin-top: -1.5rem;
+    color: white;
 }
 
 .hero-content .tagline {
-    font-size: 1.2rem; /* Medium font size for 'With our new AegisAI' */
+    font-size: 1.5rem;
     margin-top: 1rem;
-    color: #333; /* Darker gray for emphasis */
+    color: white;
 }
 
 .hero-content .btn {
@@ -431,7 +515,52 @@ td.checkmark {
     font-size: 1rem;
 }
 
-/*NOAHS SECTION */
+/* Tab Navigation */
+.tab-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid #ccc;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .tab-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .tab-item.active {
+    border-bottom: 3px solid red;
+    font-weight: bold;
+  }
+  
+  /* Tab Content */
+  .tab-content {
+    padding: 20px;
+  }
+  
+  .tab-pane {
+    display: none;
+  }
+  
+  .tab-pane.active {
+    display: block;
+  }
+
+  .feature-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  /*NOAHS SECTION */
 :root { 
     /* Text colours*/
     --description: #E2E8F0;

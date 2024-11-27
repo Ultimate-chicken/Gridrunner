@@ -6,22 +6,39 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header id="initial-header" class="initial-header">
+        <div class="container">
+            <a href="#" class="logo">GRIDRUNNER</a>
+            <nav>
+                <a href="platform.html" class="nav-link">PLATFORM</a>
+                <a href="products.html" class="nav-link">PRODUCTS</a>
+                <a href="#Partners" class="nav-link">PARTNERS</a>
+                <a href="#" class="nav-link">COMPANY</a>
+            </nav>
+        </div>
+    </header>
+
+    <header id="main-header" class="main-header">
+        <div class="container">
+            <a href="#" class="logo">GRIDRUNNER</a>
+            <nav>
+                <a href="#why" class="nav-link">Why Gridrunner?</a>
+                <a href="#platform" class="nav-link">Platform</a>
+                <a href="#stories" class="nav-link">Customer Stories</a>
+                <a href="#engage" class="nav-link">Engage with Us</a>
+            </nav>
+            <div class="indicator"></div>
+        </div>
+    </header>
+
     <main role="main">
-        <header class="main-header">
-        <nav>
-            <a href="index.html" class="logo"><b> GRIDRUNNER</b></a>
-            <a href="platform.html" class="nav-link">Platform</a>
-            <a href="products.html" class="nav-link">Products</a>
-            <a href="partners.html" class="nav-link">Partners</a>
-            <a href="company.html" class="nav-link">Company</a>
-            <button class="btn btn-secondary">GET DEMO</button>
-        </nav>
-</header>
         <section id="hero" class="section hero section">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Defend</h1>
-                    <span id="animated-text" class="subtitle">Simply</span>                   
+                    <h1>
+                        Defend<br>
+                        <span id="animated-text" class="subtitle">Simply</span>
+                    </h1>
                     <p class="tagline">With our new AegisAI:</p>
                     <button class="btn btn-secondary">Explore Platform</button>
                 </div>
@@ -34,8 +51,9 @@
             <div class="container">
                 <div class="excellence-title text-center">
                     <h2 class="text-center">The Gridrunner Excellence</h2>
+                    <hr class="red-line"> <br>
                     <p class="text-center">Technology augmented with deep security knowledge</p>
-                    <hr class="red-line">
+                    
                 </div>
 
                 <div class="grid">
@@ -85,100 +103,49 @@
             </div>
         </section>
 
-        <section id="platform" class="section platform section text-center">
-            <div class="container">
-                <h2 class="text-center">Gridrunner Platform</h2>
-                <p class="text-center">Secure your digital assets with our comprehensive cybersecurity solution</p>
-
-                <div id="feature-accordion" class="accordion">
-                    <div class="accordion-item feature-network">
-                        <div class="accordion-header">
-                            <h3>Network Security</h3>
-                        </div>
-
-                        <div class="accordion-content">
-                            <p>Advanced network protection that safeguards your digital infrastructure from sophisticated cyber threats. Our multilayered approach ensures comprehensive security across all network touchpoints.</p>
-                            <div class="feature-stats">
-                                <div class="stat-item">
-                                    <div class="stat-value">95%</div>
-                                    <div class="stat-label">Threats Blocked</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-value">100%</div>
-                                    <div class="stat-label">Network Coverage</div>
-                                </div>
-                            </div>
-                            <button class="btn btn-outline">Learn More →</button>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item" data-feature="cloud">
-                        <div class="accordion-header">
-                            <i data-lucide="cloud" class="icon"></i>
-                            <h3>Code to Cloud™</h3>
-                        </div>
-                        <div class="accordion-content">
-                            <p>Transform your operations with secure cloud infrastructure. Deploy, manage, and scale your applications with confidence. Our cloud security solutions provide end-to-end protection for your cloud-native applications.</p>
-                            <div class="feature-stats">
-                                <div class="stat-item">
-                                    <div class="stat-value">10k+</div>
-                                    <div class="stat-label">Cloud Apps Protected</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-value">-60%</div>
-                                    <div class="stat-label">Deployment Time</div>
-                                </div>
-                            </div>
-                            <button class="btn btn-outline">Learn More →</button>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item feature-ai">
-                        <div class="accordion-header">
-                            <h3>AI-Driven Security Operations</h3>
-                        </div>
-                        <div class="accordion-content">
-                            <p>Cutting-edge AI technology that proactively identifies, analyzes, and mitigates security threats in real-time. Our intelligent system adapts and learns to provide unprecedented protection.</p>
-                            <div class="feature-stats">
-                                <div class="stat-item">
-                                    <div class="stat-value">99.9%</div>
-                                    <div class="stat-label">Threats Detected</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-value">&lt;1min</div>
-                                    <div class="stat-label">Response Time</div>
-                                </div>
-                            </div>
-                            <button class="btn btn-outline">Learn More →</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="stories" class="section customer-stories section">
-            <div class="container text-center">
-                <h2 class="text-center">Trusted by the best</h2>
-                <p>2000+ Gridrunner customers</p>
-
-                <div class="grid">
-                    <div class="story-card text-center">
-                        <img src="https://via.placeholder.com/300x200" alt="Blackrock Cybersecurity">
-                        <h3>Gridrunner Protects Blackrock Cybersecurity</h3>
-                    </div>
-
-                    <div class="story-card text-center">
-                        <img src="https://via.placeholder.com/300x200" alt="F1 Infrastructure">
-                        <h3>Gridrunner Protects F1 Infrastructure</h3>
-                    </div>
-
-                    <div class="story-card text-center">
-                        <img src="https://via.placeholder.com/300x200" alt="Shannon Airport">
-                        <h3>Shannon Airport</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
+ <!-- Platform Section -->
+<section id="platform" class="section platform text-center">
+    <div class="container">
+      <h2>Gridrunner Platform</h2>
+      <hr class="red-line"> <br>
+      <p>Secure your digital assets with our comprehensive cybersecurity solution</p>
+  
+      <!-- Tab Navigation -->
+      <div class="tab-nav">
+        <a href="#" class="tab-item active" data-tab="network">Network Security</a>
+        <a href="#" class="tab-item" data-tab="cloud">Code to Cloud™</a>
+        <a href="#" class="tab-item" data-tab="ai">AI-Driven Security Operations</a>
+      </div>
+  
+      <!-- Tab Content -->
+      <div class="tab-content">
+        <div class="tab-pane active" id="network">
+          <h3>Network Security</h3>
+          <p>Advanced network protection that safeguards your digital infrastructure from sophisticated cyber threats. Our multilayered approach ensures comprehensive security across all network touchpoints.</p>
+          <div class="feature-stats">
+            <!-- Feature stats content -->
+          </div>
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+        <div class="tab-pane" id="cloud">
+          <h3>Code to Cloud™</h3>
+          <p>Transform your operations with secure cloud infrastructure. Deploy, manage, and scale your applications with confidence. Our cloud security solutions provide end-to-end protection for your cloud-native applications.</p>
+          <div class="feature-stats">
+            <!-- Feature stats content -->
+          </div>
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+        <div class="tab-pane" id="ai">
+          <h3>AI-Driven Security Operations</h3>
+          <p>Cutting-edge AI technology that proactively identifies, analyzes, and mitigates security threats in real-time. Our intelligent system adapts and learns to provide unprecedented protection.</p>
+          <div class="feature-stats">
+            <!-- Feature stats content -->
+          </div>
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
         <section id="engage" class="section engage section">
             <div class="container">
@@ -221,21 +188,22 @@
     </main>
 
     <footer>
-            <div class="footerContainer">
-                <div class="footerItem">
-                    <a href="privacy-and-terms#privacy-policy.html">Privacy Policy</a>
-                    <a href="privacy-and-terms#terms'conditions.html">Terms and Conditions</a>
-                    <a href="contact.html">Contact us</a>
-                </div>
-                <div class="footerItem">
-                    <a href="#">LinkedIn <img src="images/linkedin.svg" width="10px"/></a> 
-                    <a href="#">Discord <img src="images/discord.svg" width="10px"/></a>
-                    <a href="#">YouTube <img src="images/youtube.svg" width="10px"/></a>
-            </div></div>
-            <div class="copyright">
-                Copyright © 2024 Gridrunner. All Rights Reserved
-            </div> 
-        </footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Cookies</a>
+                <a href="#">Contact us</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i data-lucide="instagram"></i></a>
+                <a href="#"><i data-lucide="twitter"></i></a>
+                <a href="#"><i data-lucide="linkedin"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright © 2024 Gridrunner. All Rights Reserved
+        </div>
+    </footer>
     <script src="script.ts"></script>
 </body>
 </html>

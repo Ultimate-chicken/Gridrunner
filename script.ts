@@ -1,10 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Error-safe element selection
     const initialHeader = document.getElementById('initial-header');
     const mainHeader = document.getElementById('main-header');
     const heroSection = document.getElementById('hero');
     const sections = document.querySelectorAll('.section');
     const navLinks = document.querySelectorAll('.main-header .nav-link');
+    const logoLinks = document.querySelectorAll('.logo');
+    const indicator = document.querySelector('.main-header .indicator');
+    const tabItems = document.querySelectorAll('.tab-item');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
 
     // Ensure all critical elements exist
     if (!initialHeader || !mainHeader || !heroSection) {
@@ -121,4 +125,57 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     sections.forEach(section => observer.observe(section));
+
+ // Smooth scroll to the top when the logo is clicked
+ logoLinks.forEach(logo => {
+    logo.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
+
+// Update red line indicator based on the active section
+function updateIndicator() {
+    let activeSection = null;
+
+    sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            activeSection = section;
+        }
+    });
+
+    if (activeSection) {
+        const activeLink = document.querySelector(
+            `.main-header .nav-link[href="#${activeSection.id}"]`
+        );
+
+        if (activeLink) {
+            const linkRect = activeLink.getBoundingClientRect();
+            const containerRect = document
+                .querySelector('.main-header .container')
+                .getBoundingClientRect();
+
+            indicator.style.left = `${linkRect.left - containerRect.left}px`;
+            indicator.style.width = `${linkRect.width}px`;
+        }
+    }
+}
+
+window.addEventListener('scroll', updateIndicator);
+
+
+//TAB PANES
+tabItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      // Remove active class from all tabs and panes
+      tabItems.forEach(tab => tab.classList.remove('active'));
+      tabPanes.forEach(pane => pane.classList.remove('active'));
+
+      // Add active class to the clicked tab and corresponding pane
+      item.classList.add('active');
+      tabPanes[index].classList.add('active');
+    });
+  });
+
 });
