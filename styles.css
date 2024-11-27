@@ -798,13 +798,17 @@ px solid currentColor;
         }
 
 /* Footer */
+footer {
+background-color: var(--black-bg);
+}
+
 .footerContainer {
     display: flex;
     margin-top: 50px;
     width: 100%;
     justify-content: center;
     color: white;
-    background-color: var(--black-bg);
+    
 }
 
 .footerContainer a {
