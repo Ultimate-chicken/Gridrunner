@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+        // Initialize Lucide icons (ensure Lucide script is loaded)
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
     // Tabs Functionality
     const tabButtons = document.querySelectorAll('.gr-tab-btn');
     const tabContents = document.querySelectorAll('.gr-tab-content');
@@ -75,22 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             header.classList.remove('scrolled');
         }
-    });
-
-    // Demo/Contact Button Handlers
-    const demoButtons = document.querySelectorAll('.gr-btn-primary, .btn-primary');
-    const contactButtons = document.querySelectorAll('.btn-secondary');
-
-    demoButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            alert('Demo request submitted. Our team will contact you soon!');
-        });
-    });
-
-    contactButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            alert('Contact form initiated. Please fill out your details.');
-        });
     });
 
     // Ensure responsive behavior for full-width sections

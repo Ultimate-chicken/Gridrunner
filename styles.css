@@ -59,7 +59,7 @@
     }
 
     body {
-        font-family: system-ui, -apple-system, sans-serif;
+        font-family: 'Roboto';
         line-height: 1.5;
         margin: 0;
         padding: 0;
@@ -78,11 +78,11 @@
       }
 
     .container {
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-    }
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+          }
 
     /* Section related */
     section {
@@ -107,6 +107,48 @@
     }
 
    /* Header styles */
+
+   .container_head {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+   .btn-demo {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-demo:hover {
+    background-color: #f00;
+    color: #fff;
+  }
+
+  .logo-image {
+    height: 70px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.main-header .nav-link {
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 10;
+}
+
 .initial-header, .main-header {
     position: fixed;
     top: 0;
@@ -119,11 +161,13 @@
     background: linear-gradient(to bottom, #000 90%, rgba(102,0,0,1));
 }
 
-.initial-header .container, .main-header .container {
-    display: flex;
-    /*align-items: center; */
-    height: 80px;
-    position: relative;
+.initial-header .container_head,
+.main-header .container_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  position: relative;
 }
 
 /* Ensure both headers use the same centering technique */
@@ -133,37 +177,18 @@
     transform: translateX(-50%);
 }
 
-.initial-header nav a, .main-header nav a {
-    color: #fff;
-    text-decoration: 1px solid underline transparent;
-    padding: 10px;
-    font-size: 14px;
+.initial-header nav a,
+.main-header nav a {
+  color: #fff;
+  text-decoration: 1px solid underline transparent;
+  padding: 10px;
+  font-size: 14px;
+  transition: color 0.3s ease;
 }
 
-nav a:hover {
-    text-decoration: 1px solid underline red;
-    transition: 300ms all;
-}
-
-.btn-secondary:hover {
-    background-color: #8e0000;
-    color: white;
-    transition: 300ms all;
-}
-
-.initial-header .logo:hover {
-    color:#CCCCCC;
-    transition: 300ms all;
-}
-
-/* Logo alignment */
-.logo {
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: left;
-    margin-left: 20px; /* Optional: spacing from the left edge */
+.initial-header nav a:hover,
+.main-header nav a:hover {
+  color: #f00;
 }
 
     /* Product section: Tabs */
@@ -581,44 +606,50 @@ nav a:hover {
 
 /* Footer */
 footer {
-background-color: #000;
-padding: 20px;
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
 }
 
-.footerContainer {
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-bottom {
     display: flex;
-    margin-top: 50px;
-    width: 100%;
-    justify-content: center;
-    color: white;
-    
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
 }
 
-.footerContainer a {
-    text-decoration: 1px solid underline transparent;
-    margin: 10px;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    transition: 300ms text-decoration;
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
 }
 
-.footerContainer a:hover {
-    text-decoration: 1px solid underline red;
-    background-clip: text;
-    transition: 200ms all;
+.social-icons {
+    display: flex; /* Arrange items in a row */
+    justify-content: flex-end; /* Align items to the far right */
+    align-items: center; /* Align items vertically (optional) */
 }
 
-.footerItem {
-    display: inline-flex;
-    flex-direction: column;
-    margin: 0 20px;
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 15px; /* Spacing between icons */
+    text-decoration: none; /* Remove underline */
 }
 
 .copyright {
-    margin-top: 50px;
-    color: white;
     text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
 }
 
        /* Sidebar Styling */
@@ -693,170 +724,102 @@ padding: 20px;
         color: #8e0000;
     }
 
-     /* General Layout */
-     .contact-us {
-        margin: 0 auto;
-        padding: 80px 0px;
-    }
-
-    .contact-us p {
-        font-size: 18px;
-        color: #323232;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    /* Tab Navigation */
-
-    .contact-title {
-        background-color: black;
-        width: 100%;
-        padding: 30px;
-        margin-bottom: 30px;
-    }
-
-    .contact-title h1 {
-        color:white;
-    }
-
-    .contact-title p{
-        color: #CCCCCC;
-    }
-
-    .tabs {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 40px;
-        border-bottom: 2px solid darkred;
-    }
-
-    .tab {
-        padding: 10px 20px;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        border: 1px solid #ddd;
-        border-bottom: none;
-        transition: background-color 0.3s;
-        color: black;
-        background-color: transparent;
-        text-align: center;
-    }
-
-    .tab.active {
-        color: darkred;
-        background-color: #fff;
-        border: 2px solid darkred; /* Applies to all four sides */
-        border-bottom: none; /* Removes the left border */
-    }
-
-    /* Tab Content */
-    .tab-content {
-        display: none;
-        padding: 20px;
-        margin-bottom: 40px;
-    }
-
-    .tab-content.active {
-        display: block;
-    }
-
-    /* Contact Info Layout */
-    .contact-info {
-        font-size: 16px;
-        color: #666;
-    }
-
-    .contact-info h2 {
-        font-size: 24px;
-        font-weight: 600;
-        color: #333;
-        margin-bottom: 15px;
-    }
-
-    .contact-info p {
-        margin-bottom: 10px;
-    }
-
-    .contact-info a {
-        color: darkred;
-        text-decoration: none;
-        font-weight: 600;
-    }
-
-    .contact-info a:hover {
-        text-decoration: underline;
-    }
-
-    /* Form Fields */
-    .form-group {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .form-group label {
-        font-size: 16px;
-        font-weight: 500;
-        color: #333;
-        margin-bottom: 8px;
-        display: block;
-    }
-
-    /* New Form Row for Name and Email */
-    .form-row {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-    }
-
-    .form-row .form-group {
-        flex: 1;
-    }
-
-    .form-group input,
-    .form-group textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ddd;
-        border-radius: 6px;
-        font-size: 16px;
-        background-color: #fff;
-        transition: all 0.3s ease;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-        border-color: darkred;
-        box-shadow: 0 0 5px darkred;
-        outline: none;
-    }
-
-    /* Button Styling */
-    .contact-form button {
-        background-color: transparent;
-        color: darkred;
-        border: 1px solid darkred;
-        padding: 12px 24px;
-        font-size: 18px;
-        font-weight: 600;
-        cursor: pointer;
-        border-radius: 6px;
-        transition: all 0.3s ease;
-        width: 100%;
-    }
-
-    .contact-form button:hover {
-        background-color: darkred;
-        color: white;
-    }
-
-    .contact-form h1 {
-        font-size: 36px;
-        font-weight: 600;
-        color: black;
-        text-align: center;
-    }
-
-    .contact-form {
-        margin: 0rem 4rem;
-    }
+        /* Contact Info Layout */
+        .contact-info {
+            font-size: 16px;
+            color: #666;
+        }
+    
+        .contact-info h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+    
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+    
+        .contact-info a {
+            color: darkred;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    
+        /* Form Fields */
+        .form-group {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    
+        .form-group label {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 8px;
+            display: block;
+        }
+    
+        /* New Form Row for Name and Email */
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+    
+        .form-row .form-group {
+            flex: 1;
+        }
+    
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            background-color: #fff;
+            transition: all 0.3s ease;
+        }
+    
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: darkred;
+            box-shadow: 0 0 5px darkred;
+            outline: none;
+        }
+    
+        /* Button Styling */
+        .contact-form button {
+            background-color: transparent;
+            color: darkred;
+            border: 1px solid darkred;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+    
+        .contact-form button:hover {
+            background-color: darkred;
+            color: white;
+        }
+    
+        .contact-form h1 {
+            font-size: 36px;
+            font-weight: 600;
+            color: black;
+            text-align: center;
+        }
+    
+        .contact-form {
+            margin: 0rem 4rem;
+        }

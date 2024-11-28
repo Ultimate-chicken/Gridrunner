@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto';
     line-height: 1.gr-6;
     color: #333;
 }
@@ -18,48 +18,90 @@ body {
     padding: 0 20px;
 }
 
-/* Header styles */
-.initial-header, .main-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease-in-out;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.btn-demo {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-demo:hover {
+    background-color: #f00;
+    color: #fff;
+  }
+
+  .logo-image {
+    height: 70px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
 }
 
-.initial-header .container, .main-header .container {
-    display: flex;
-    align-items: center;
-    height: 80px;
-    position: relative;
+/* Header styles */
+.initial-header, .main-header {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 1000;
+background-color: rgba(0, 0, 0, 0.8);
+backdrop-filter: blur(10px);
+transition: transform 0.3s ease-in-out;
+background: linear-gradient(to bottom, #000 90%, rgba(102,0,0,1));
+}
+
+.initial-header .container,
+.main-header .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 80px;
+position: relative;
 }
 
 /* Ensure both headers use the same centering technique */
 .initial-header nav, .main-header nav {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
 }
 
-.initial-header nav a, .main-header nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px; /* Adds spacing between nav items */
-    font-size: 14px;
+.initial-header nav a,
+.main-header nav a {
+color: #fff;
+text-decoration: 1px solid underline transparent;
+padding: 10px;
+font-size: 14px;
+transition: color 0.3s ease;
 }
 
+.initial-header nav a:hover,
+.main-header nav a:hover {
+color: #f00;
+}
+
+
+/* Logo alignment */
 .initial-header .logo, .main-header .logo {
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: left;
-    margin-left: 20px; /* Optional: spacing from the left edge */
+color: #fff;
+font-size: 24px;
+font-weight: bold;
+text-decoration: none;
+text-align: left;
+margin-left: 20px; /* Optional: spacing from the left edge */
 }
-
 .red-line {
     width: 100px;
     height: 3px;
@@ -69,20 +111,6 @@ body {
 }
 
 /* Header styles */
-header {
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 64px;
-}
 
 .gr-logo {
     font-size: 24px;
@@ -131,13 +159,13 @@ nav {
 }
 
 .gr-btn-primary {
-    background-color: #0070f3;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     border: none;
 }
 
 .gr-btn-primary:hover {
-    background-color: #0060d3;
+    background-color: red;
 }
 
 .gr-btn-secondary {
@@ -157,8 +185,7 @@ nav {
 }
 
 .gr-btn-outline:hover {
-    background-color: #000000;
-    color: rgb(0, 0, 0);
+    background-color: red;
 }
 
 .gr-btn-lg {
@@ -509,18 +536,17 @@ footer {
 
 /* CTA Section */
 
+.cta {
+    text-align: center;
+    background-color: #000000;
+}
+
 .cta h2 {
     margin-bottom: 1rem;
 }
 
 .cta p {
-    font-size: 24px;
-    margin-bottom: 40px;
-}
-
-.cta .large-text {
-    font-size: 64px;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .cta .btn {
@@ -528,10 +554,27 @@ footer {
 }
 
 .cta {
-    background-color: #000;
-    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.cta-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6; /* Adjust opacity to make text readable */
+    z-index: 1;
+}
+.cta .container {
+    position: relative;
+    z-index: 2;
     text-align: center;
-    padding: 100px 0;
+}
+
+.cta-button:hover {
+    background-color: #f4f4f4;
 }
 
 .customer-stories {
@@ -556,4 +599,51 @@ footer {
     padding: 40px;
     text-align: center;
     border-radius: 8px;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.social-icons {
+    display: flex; /* Arrange items in a row */
+    justify-content: flex-end; /* Align items to the far right */
+    align-items: center; /* Align items vertically (optional) */
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 15px; /* Spacing between icons */
+    text-decoration: none; /* Remove underline */
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
 }

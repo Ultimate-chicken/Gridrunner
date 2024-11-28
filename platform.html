@@ -1,22 +1,25 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gridrunner</title>
+    <script type="module" src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="platform_styles.css">
 </head>
-
 <body>
     <header id="initial-header" class="initial-header">
         <div class="container">
-            <a href="#" class="logo">GRIDRUNNER</a>
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Gridrunner Logo" class="logo-image">
+              </a>
             <nav>
                 <a href="platform.html" class="nav-link">PLATFORM</a>
                 <a href="products.html" class="nav-link">PRODUCTS</a>
                 <a href="partners.html" class="nav-link">PARTNERS</a>
-                <a href="#" class="nav-link">COMPANY</a>
+                <a href="company.html" class="nav-link">COMPANY</a>
             </nav>
+            <a class="btn btn-demo" href="demo.html">GET DEMO</a>
         </div>
     </header>
 
@@ -27,7 +30,7 @@
                 <p>Empower your organization with our cutting-edge, AI-driven cybersecurity platform designed to detect
                     and neutralize threats before they impact your systems.</p>
                 <div class="gr-cta-buttons">
-                    <button class="gr-btn gr-btn-primary gr-btn-lg">Request a Demo</button>
+                    <button class="gr-btn gr-btn-primary gr-btn-lg" href="demo.html">Request a Demo</button>
                 </div>
             </div>
         </section>
@@ -38,17 +41,25 @@
                 <hr class="red-line"> <br>
                 <div class="gr-feature-grid">
                     <div class="gr-feature-card">
-                        <img src="shield-icon.png" alt="Shield Icon" class="gr-feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-off">
+                            <path d="M12 2v8m0 4v2m0 4v2m9-7V3a9 9 0 1 0-18 0v7l9 5 9-5z"/>
+                        </svg>
                         <h3>Advanced Threat Detection</h3>
                         <p>Utilize AI and machine learning to identify and neutralize threats in real time.</p>
                     </div>
                     <div class="gr-feature-card">
-                        <img src="secure-icon.png" alt="Secure Icon" class="gr-feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock">
+                            <path d="M12 17a2 2 0 1 1-2-2 2 2 0 0 1 2 2z"/>
+                            <path d="M8 7V3a4 4 0 1 1 8 0v4"/>
+                            <path d="M6 7h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"/>
+                        </svg>
                         <h3>Data Protection</h3>
                         <p>Ensure your data is safe with state-of-the-art encryption technologies.</p>
                     </div>
                     <div class="gr-feature-card">
-                        <img src="cloud-icon.png" alt="Cloud Icon" class="gr-feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud">
+                            <path d="M20 17a5 5 0 0 0-10 0H4a4 4 0 0 1 4-4h1.5a4 4 0 1 1 7.5-2A5 5 0 0 0 20 17z"/>
+                        </svg>
                         <h3>Cloud Integration</h3>
                         <p>Seamlessly integrate with popular cloud services for enhanced scalability.</p>
                     </div>
@@ -58,20 +69,35 @@
 
         <section class="gr-modules full-width">
             <div class="gr-container">
-                <h2>Modules Tailored to Your Needs</h2>
+                <h2>Unleashing AegisAI</h2>
                 <hr class="red-line"> <br>
                 <div class="gr-module-grid">
                     <div class="gr-module-card white-text">
-                        <h3>Incident Response</h3>
-                        <p>Handle incidents swiftly and minimize downtime.</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-alert-triangle">
+                            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+                            <path d="M12 9v4"/>
+                            <path d="M12 17h.01"/>
+                        </svg>
+                        <h3>Incident Response</h3> <br>
+                        <p>Rapid threat detection and mitigation with AI-powered incident management. Minimize downtime and reduce potential damage.</p>
                     </div>
                     <div class="gr-module-card white-text">
-                        <h3>Vulnerability Management</h3>
-                        <p>Proactively identify and fix system vulnerabilities.</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="m9 12 2 2 4-4"/>
+                        </svg>
+                        <h3>Vulnerability Management</h3> <br>
+                        <p>Proactively scan, identify, and prioritize system vulnerabilities with intelligent risk assessment and remediation strategies.</p>
                     </div>
                     <div class="gr-module-card white-text">
-                        <h3>Network Security</h3>
-                        <p>Protect your network with layered defenses.</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wifi">
+                            <path d="M12 20a2 2 0 1 1-2-2 2 2 0 0 1 2 2z"/>
+                            <path d="M2.93 8.11a10 10 0 0 1 18.14 0"/>
+                            <path d="M5.8 12.05a6 6 0 0 1 12.4 0"/>
+                            <path d="M8.7 16a2 2 0 0 1 6.6 0"/>
+                        </svg>
+                        <h3>Network Security</h3> <br>
+                        <p>Implement advanced multi-layered network defenses with real-time monitoring and intelligent threat prevention.</p>
                     </div>
                 </div>
             </div>
@@ -87,7 +113,7 @@
                         <div class="testimonial-content">
                             <p>"Gridrunner has transformed our security operations. We've seen a 70% reduction in
                                 incident response time."</p>
-                            <div class="author-info">
+                            <div class="author-info"> <br>
                                 <h4>Patrick Taurin</h4>
                                 <p>CISO, Brut Force</p>
                             </div>
@@ -96,11 +122,10 @@
                     <div class="testimonial">
                         <img src="https://via.placeholder.com/50x50" alt="John Smith" class="author-avatar">
                         <div class="testimonial-content">
-                            <p>"The AI-driven threat detection is a game-changer. It's like having an army of security
-                                experts working 24/7."</p>
-                            <div class="author-info">
+                            <p>"The AI-driven threat detection is a game-changer. It's like my wife when she left—always watching, always analyzing!"   </p>
+                            <div class="author-info"> <br>
                                 <h4>Harry Dubois</h4>
-                                <p>Head of IT, Revachole Corp</p>
+                                <p>Head of IT, Revachol Corp</p>
                             </div>
                         </div>
                     </div>
@@ -109,7 +134,7 @@
                         <div class="testimonial-content">
                             <p>"Implementing Gridrunner was seamless. The support team was exceptional throughout the
                                 entire process."</p>
-                            <div class="author-info">
+                            <div class="author-info"> <br>
                                 <h4>Alice O'Regan</h4>
                                 <p>CTO, AIB</p>
                             </div>
@@ -243,9 +268,10 @@
         </section>
 
         <section class="cta full-width">
-            <div class="gr-container">
+            <img src="CTA.gif" alt="CTA Background" class="cta-gif">
+            <div class="container">
                 <h2 class="large-text">Ready to secure your digital assets?</h2>
-                <p>Get started with Gridrunner today and experience unparalleled cybersecurity protection.</p>
+                <p><span style="color: rgb(255, 255, 255);">Get started with Gridrunner today and experience unparalleled cybersecurity protection.</span></p>
                 <button class="gr-btn gr-btn-primary gr-btn-lg">Get Started</button>
             </div>
         </section>
@@ -253,10 +279,13 @@
 
     <footer>
         <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Gridrunner Logo" class="logo-image">
+              </a>
             <div class="footer-links">
-                <a href="#">Privacy</a>
-                <a href="#">Cookies</a>
-                <a href="#">Contact us</a>
+                <a href="privacy-and-terms.html" class="nav-link">Privacy</a>
+                <a href="privacy-and-terms.html" class="nav-link">Cookies</a>
+                <a href="privacy-and-terms.html" class="nav-link">Contact us</a>
             </div>
             <div class="social-icons">
                 <a href="#"><i data-lucide="instagram"></i></a>
@@ -268,6 +297,7 @@
             Copyright © 2024 Gridrunner. All Rights Reserved
         </div>
     </footer>
+
     <script src="platform_script.js"></script>
 </body>
 
