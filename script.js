@@ -15,25 +15,6 @@ const tabs = document.querySelectorAll('.tab');
             });
         });
 
-        // Get all the tab buttons and the corresponding tab content
-const SuccessTabs = document.querySelectorAll('.tab-success');
-const tabContents = document.querySelectorAll('.tab-content-success');
-
-// Add event listeners to each tab button
-SuccessTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        // Remove 'active' class from all tabs and tab contents
-        SuccessTabs.forEach(t => t.classList.remove('active'));
-        tabContents.forEach(content => content.classList.remove('active'));
-
-        // Add 'active' class to the clicked tab and its content
-        const target = document.getElementById(tab.getAttribute('data-tab'));
-        tab.classList.add('active');
-        target.classList.add('active');
-    });
-});
-
-
         //partners tabs
         function showPartner(index) {
             // Hide all partner cards
@@ -53,3 +34,24 @@ SuccessTabs.forEach(tab => {
 
         // Default to showing the first partner
         showPartner(0);
+
+        // Contact tabs
+        const contactTabs = document.querySelectorAll('.tab');
+        const contactTabContent = document.querySelectorAll('.tab-content');
+
+        contactTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                contactTabs.forEach(tab => tab.classList.remove('active'));
+
+                // Hide all tab contents
+                contactTabContent.forEach(content => content.classList.remove('active'));
+
+                // Add active class to clicked tab
+                tab.classList.add('active');
+
+                // Show corresponding tab content
+                const activeTab = tab.getAttribute('data-tab');
+                document.getElementById(activeTab).classList.add('active');
+            });
+        });
