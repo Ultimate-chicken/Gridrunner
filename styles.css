@@ -116,6 +116,27 @@ nav a:hover {
     transition: 300ms all;
 }
 
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #f00;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: #000;
+    position: absolute;
+    right: 15px;
+}
+
 .btn-secondary:hover {
     background-color: #8e0000;
     color: white;
