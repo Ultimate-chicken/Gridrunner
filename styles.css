@@ -62,8 +62,7 @@
     }
 
     #Products h1 {
-        background: var(--blue-gradient-bg);
-        color: var(--gradient-txt);
+        color:white;
         background-clip: text;
     }
 
