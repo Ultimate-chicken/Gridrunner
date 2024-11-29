@@ -1,4 +1,28 @@
 /* General configs */
+:root { 
+    /* Text colours*/
+    --description: #E2E8F0;
+
+    /*Background colors */
+    --black-bg: #1A1A1A;
+    --gray-bg: #262626;
+    --white-bg: #F1F1F1;
+    --blue-bg: #141539;
+    --lightblue-bg: #2B2C4C;
+    --dark-red-bg: #660000;
+
+    /* Gradient */
+    --blue-gradient-bg: linear-gradient(to right, #4772C9, #ffff);
+    --red-gradient-bg: linear-gradient(to right, #000000, #833434);
+    --gradient-txt: transparent;
+
+    /* Product colors*/
+    --core-section: #a0db8e;
+    --scale-section: #F09E2B;
+    --distributed-section: #7891FF;
+    --ultimate-section: #FF6262;
+    }
+
  html {
         scroll-behavior: smooth;
     }
