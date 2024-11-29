@@ -823,3 +823,42 @@ footer {
         .contact-form {
             margin: 0rem 4rem;
         }
+
+/* Problmatic section */
+    .contactTabs {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        border-bottom: 2px solid darkred;
+    }
+
+    .contentTab {
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        border: 1px solid #ddd;
+        border-bottom: none;
+        transition: background-color 0.3s;
+        color: black;
+        background-color: transparent;
+        text-align: center;
+    }
+
+    .contentTab.active {
+        color: darkred;
+        background-color: #fff;
+        border: 2px solid darkred; /* Applies to all four sides */
+        border-bottom: none; /* Removes the left border */
+    }
+
+    /* Tab Content */
+    .contentTabClass {
+        display: none;
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+
+    .contentTabClass.active {
+        display: block;
+    }
