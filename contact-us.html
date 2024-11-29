@@ -1,43 +1,39 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gridrunner</title>
-    <script type="module" src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Contact Us - CyberSafe Solutions</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header id="initial-header" class="initial-header">
         <div class="container">
-            <a href="index.html" class="logo">
-                <img src="logo.png" alt="Gridrunner Logo" class="logo-image">
-              </a>
+            <a href="index.html" class="logo">GRIDRUNNER</a>
             <nav>
                 <a href="platform.html" class="nav-link">PLATFORM</a>
                 <a href="products.html" class="nav-link">PRODUCTS</a>
                 <a href="partners.html" class="nav-link">PARTNERS</a>
                 <a href="company.html" class="nav-link">COMPANY</a>
             </nav>
-            <a class="btn btn-demo" href="demo.html">GET DEMO</a>
+        <a class="btn btn-secondary" href="demo.html">GET DEMO</a>
         </div>
     </header>
-
     <section class="contact-us">
         <div class="contact-title"> 
         <h1>Contact Us</h1>
         <p>We are happy to assit you and answer your queries. Please, choose a department so we can direct you to the appropiate specialists</p>
     </div>
         <!-- Tab Navigation -->
-        <div class="tabs">
-            <div class="tab" data-tab="support">Technical Support</div>
-            <div class="tab" data-tab="incident">Incident Response</div>
-            <div class="tab" data-tab="partnerships">Partnerships</div>
+        <div class="contactTabs">
+            <div class="contentTab active" data-tab="support">Technical Support</div>
+            <div class="contentTab" data-tab="incident">Incident Response</div>
+            <div class="contentTab" data-tab="partnerships">Partnerships</div>
         </div>
        
 
         <!-- Tab Content -->
-        <div id="support" class="tab-content active">
+        <div id="support" class="contentTabClass active">
             <div class="contact-info">
                 <p>If you're facing technical issues or need troubleshooting with our platform, contact our Technical Support team for immediate 24/7 assistance. Free of costs. </p>
                 <p><strong>Email:</strong> <a href="mailto:support@gridrunner.com">support@gridrunner.com</a></p>
@@ -45,7 +41,7 @@
             </div>
         </div>
 
-        <div id="incident" class="tab-content">
+        <div id="incident" class="contentTabClass">
             <div class="contact-info">
                 <p>For immediate assistance with security breaches or incidents, do not hesitate to contact our specialists in order to quickly contain and resolve cybersecurity threats. Initial assesment is free, and the actual response is discounted at a rate of 50% for first-time clients. </p>
                 <p><strong>Email:</strong> <a href="mailto:incidents@gridrunner.com">incidents@gridrunner.com</a></p>
@@ -53,7 +49,7 @@
             </div>
         </div>
 
-        <div id="partnerships" class="tab-content">
+        <div id="partnerships" class="contentTabClass">
             <div class="contact-info">
                 <p>Interested in partnering with us? Our Partnerships team will be happy to discuss opportunities and explore synergies.</p>
                 <p><strong>Email:</strong> <a href="mailto:partnerships@gridrunner.com">partnerships@gridrunner.com</a></p>
@@ -90,26 +86,21 @@
     </section>
 
     <footer>
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="logo.png" alt="Gridrunner Logo" class="logo-image">
-              </a>
-            <div class="footer-links">
-                <a href="privacy-and-terms.html">Privacy</a>
-                <a href="privacy-and-terms.html">Cookies</a>
-                <a href="privacy-and-terms.html">Contact us</a>
+        <div class="footerContainer">
+            <div class="footerItem">
+                <a href="terms-and-privacy.html#privacy-policy">Privacy Policy</a>
+                <a href="terms-and-privacy.html#terms-conditions">Terms and Conditions</a>
+                <a href="contact-us.html">Contact us</a>
             </div>
-            <div class="social-icons">
-                <a href="#"><i data-lucide="instagram"></i></a>
-                <a href="#"><i data-lucide="twitter"></i></a>
-                <a href="#"><i data-lucide="linkedin"></i></a>
-            </div>
-        </div>
+            <div class="footerItem">
+                <a href="#">LinkedIn <img src="images/linkedin.svg" width="10px"/></a> 
+                <a href="#">Discord <img src="images/discord.svg" width="10px"/></a>
+                <a href="#">YouTube <img src="images/youtube.svg" width="10px"/></a>
+        </div></div>
         <div class="copyright">
             Copyright © 2024 Gridrunner. All Rights Reserved
-        </div>
+        </div> 
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
