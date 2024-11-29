@@ -102,7 +102,7 @@
     object-fit: contain;
 }
 
-.main-header .nav-link {
+.nav-link {
     display: inline-block;
     padding: 10px;
     color: #fff;
@@ -112,7 +112,7 @@
     z-index: 10;
 }
 
-.initial-header, .main-header {
+.initial-header {
     position: fixed;
     top: 0;
     left: 0;
@@ -124,8 +124,7 @@
     background: linear-gradient(to bottom, #000 90%, rgba(102,0,0,1));
 }
 
-.initial-header .container_head,
-.main-header .container_head {
+.initial-header .container_head {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -134,14 +133,13 @@
 }
 
 /* Ensure both headers use the same centering technique */
-.initial-header nav, .main-header nav {
+.initial-header nav {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.initial-header nav a,
-.main-header nav a {
+.initial-header nav a {
   color: #fff;
   text-decoration: 1px solid underline transparent;
   padding: 10px;
@@ -149,8 +147,7 @@
   transition: color 0.3s ease;
 }
 
-.initial-header nav a:hover,
-.main-header nav a:hover {
+.initial-header nav a:hover {
   color: #f00;
 }
 
