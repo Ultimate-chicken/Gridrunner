@@ -21,6 +21,7 @@
     --ultimate-section: #FF6262;
 }
 
+/* General styling */
 html {
     scroll-behavior: smooth;
 }
@@ -45,8 +46,8 @@ h1 {
 }
 
 a {
-    color: black; /* Default color */
-    text-decoration: none; /* Optional: removes underline */
+    color: black; 
+    text-decoration: none; 
   }
 
 .container {
@@ -56,7 +57,6 @@ a {
     margin: 0 auto;
       }
 
-/* Section related */
 section {
     padding-top: 100px;
 }
@@ -71,7 +71,7 @@ section {
     background-clip: text;
 }
 
-/* Header styles */
+/* Header */
 .container_head {
     max-width: 1200px;
     margin: 0 auto;
@@ -133,7 +133,6 @@ section {
   position: relative;
 }
 
-/* Ensure both headers use the same centering technique */
 .initial-header nav {
     position: absolute;
     left: 50%;
@@ -265,7 +264,6 @@ section {
 
 .cta-section div {
     flex-direction: column;
-
 }
 
 .cta-section h2 {
