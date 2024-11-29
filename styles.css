@@ -725,11 +725,6 @@ footer {
     }
 
     /* General Layout */
-     .contact-us {
-        margin: 0 auto;
-        padding: 80px 0px;
-    }
-
     .contact-us p {
         font-size: 18px;
         color: #323232;
