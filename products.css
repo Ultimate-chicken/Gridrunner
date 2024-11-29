@@ -23,6 +23,7 @@
     --ultimate-section: #FF6262;
     }
 
+/* General configs */
  html {
         scroll-behavior: smooth;
     }
@@ -47,8 +48,8 @@
     }
 
     a {
-        color: black; /* Default color */
-        text-decoration: none; /* Optional: removes underline */
+        color: black; 
+        text-decoration: none; 
       }
 
     .container {
@@ -132,7 +133,6 @@
   position: relative;
 }
 
-/* Ensure both headers use the same centering technique */
 .initial-header nav {
     position: absolute;
     left: 50%;
@@ -192,7 +192,6 @@
         }
 
         /* Products section: Tab content */
-
         .tab-content {
             background: white;
             padding: 2rem;
