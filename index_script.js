@@ -35,6 +35,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    //Clickable buttons le function
+    function toggleButtonStyle(button) {
+        button.classList.toggle("active");
+      }
+
     // Highlight active section in navigation
     function highlightActiveSection() {
         let current = '';

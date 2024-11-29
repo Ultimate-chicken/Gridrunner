@@ -62,7 +62,7 @@ body {
 
 .initial-header nav a:hover,
 .main-header nav a:hover {
-  color: #f00;
+  color: red;
 }
 
 
@@ -86,7 +86,7 @@ body {
     left: 0;
     height: 3px;
     width: 0;
-    background-color: red;
+    background-color: #8e0000;
     transition: left 0.3s ease, width 0.3s ease;
 }
 
@@ -102,7 +102,7 @@ body {
   
 
   .btn-primary {
-    background-color: #f00;
+    background-color: #8e0000;
     color: #fff;
   }
 
@@ -114,8 +114,15 @@ body {
 .btn-outline {
     background-color: transparent;
     border: 1px solid currentColor;
-    color: inherit;
+    color: black;
 }
+
+
+  .btn-outline:hover {
+    background-color: #8e0000;
+    color: white;
+    border: 1px solid #8e0000;
+  }
 
 /* Section styles */
 .section {
@@ -132,7 +139,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.5; /* Adjust opacity to make text readable */
+    opacity: 0.5;
     z-index: 1;
 }
 .hero-content {
@@ -156,7 +163,7 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 3rem; /* Large font size for 'Defend' */
+    font-size: 3rem;
     margin-bottom: 0.5rem;
 }
 
@@ -203,8 +210,8 @@ body {
 }
 
 .engage-card img {
-    max-width: 100%; /* Ensure the image doesn't exceed card width */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 30%;
+    height: auto;
     margin-bottom: 20px;
   }
 
@@ -228,7 +235,7 @@ body {
 .stat-value {
     font-size: 36px;
     font-weight: bold;
-    color: #f00;
+    color: #8e0000;
 }
 
 .stat-label {
@@ -241,30 +248,6 @@ body {
     color: #fff;
 }
 
-.accordion-item {
-    border: 10px solid #333;
-    margin-bottom: 10px;
-}
-
-.accordion-header {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    cursor: pointer;
-}
-
-.accordion-content {
-    padding: 15px;
-    display: none;
-}
-
-.accordion-item.active .accordion-content {
-    display: block;
-}
-
-.customer-stories {
-    background-color: #f5f5f5;
-}
 
 .story-card {
     background-color: #fff;
@@ -281,6 +264,10 @@ body {
 
 .engage {
     background-color: #fff;
+}
+
+.engage-title {
+    font-size: 35px;
 }
 
 .cta {
@@ -316,17 +303,22 @@ footer {
     margin-right: 15px;
 }
 
+.footer-links a:hover {
+  color: red;
+}
+
+
 .social-icons {
-    display: flex; /* Arrange items in a row */
-    justify-content: flex-end; /* Align items to the far right */
-    align-items: center; /* Align items vertically (optional) */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .social-icons a {
     color: #fff;
     font-size: 20px;
-    margin-left: 15px; /* Spacing between icons */
-    text-decoration: none; /* Remove underline */
+    margin-left: 15px;
+    text-decoration: none;
 }
 
 .copyright {
@@ -339,95 +331,9 @@ footer {
 /* Responsive design */
 @media (max-width: 768px) {
     .initial-header nav {
-        display: none; /* Keep mobile navigation hidden */
+        display: none;
     }
 }
-
-/* Integration logos */
-.integration-logos {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-}
-
-.integration-logo {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    margin: 1rem;
-}
-
-/* Testimonials */
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.testimonial-card {
-    background-color: #f5f5f5;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    margin-top: 1rem;
-}
-
-.author-avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 1rem;
-}
-
-.author-info h4 {
-    margin: 0;
-    font-size: 1rem;
-}
-
-.author-info p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: #666;
-}
-
-/* Comparison table */
-.comparison-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 2rem;
-}
-
-.comparison-table th,
-.comparison-table td {
-    padding: 1rem;
-    text-align: center;
-    border: 1px solid #ddd;
-}
-
-.comparison-table th {
-    background-color: #f5f5f5;
-    font-weight: bold;
-}
-
-.comparison-table .icon-small {
-    width: 20px;
-    height: 20px;
-}
-
-.comparison-table .price {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
 /* CTA Section */
 .cta {
     text-align: center;
@@ -456,7 +362,7 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.5; /* Adjust opacity to make text readable */
+    opacity: 0.5;
     z-index: 1;
 }
 .cta .container {
@@ -525,34 +431,6 @@ footer {
     margin-bottom: 30px;
 }
 
-/* Accordion feature styling */
-.accordion-item .accordion-header {
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.accordion-item .accordion-header:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.accordion-content {
-    display: none;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-.accordion-item.active .accordion-content {
-    display: block;
-}
-
-/* Customer stories section */
-.customer-stories .story-card {
-    text-align: center;
-}
-
-.customer-stories .story-card h3 {
-    margin-top: 15px;
-}
 
 /* CTA section modifications */
 .cta .large-text {
@@ -562,12 +440,12 @@ footer {
 
 /* Red "what's next" text */
 .highlight {
-    color: red;
+    color: #8e0000;
 }
 
 .hero-content .subtitle {
     display: block;
-    font-size: 3rem; /* Smaller font for 'Simply' */
+    font-size: 3rem;
     font-weight: bold;
     margin-top: -1.5rem;
     color: white;
@@ -606,7 +484,7 @@ footer {
   }
   
   .tab-item.active {
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid #8e0000;
     font-weight: bold;
   }
   
@@ -637,15 +515,33 @@ footer {
     cursor: pointer;
     font-size: 14px;
     font-weight: bold;
-    text-decoration: none;
     background-color: #fff;
     color: #000;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
+
+  
+  .btn-demo.active {
+    background-color: #8e0000;
+    color: #fff;
+  }
+
+  .btn-demo a {
+    text-decoration: none;
+  }
+
+  .btn-demo:hover {
+    background-color: #8e0000;
+    color: white;
+    border: 1px solid #8e0000;
+  }
+
+ a:visited {
+    text-decoration: none;
+ }
   
   .btn-demo:hover {
-    background-color: #f00;
-    color: #fff;
+    background-color: #8e0000;
   }
 
   .logo-image {

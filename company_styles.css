@@ -1,6 +1,6 @@
 :root {
     --primary-black: #000000;
-    --primary-red: #dc2626;
+    --primary-red: #8e0000;
     --secondary-gray: #1f2937;
     --text-white: #ffffff;
 }
@@ -32,15 +32,26 @@
             cursor: pointer;
             font-size: 14px;
             font-weight: bold;
-            text-decoration: none;
             background-color: #fff;
             color: #000;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-decoration: none;
           }
+        
           
-          .btn-demo:hover {
-            background-color: #f00;
+          .btn-demo.active {
+            background-color: #8e0000;
             color: #fff;
+          }
+        
+          .btn-demo a {
+            text-decoration: none;
+          }
+        
+          .btn-demo:hover {
+            background-color: #8e0000;
+            color: white;
+            border: 1px solid #8e0000;
           }
         
           .logo-image {
@@ -72,7 +83,6 @@
   position: relative;
 }
 
-/* Ensure both headers use the same centering technique */
 .initial-header nav, .main-header nav {
     position: absolute;
     left: 50%;
@@ -93,15 +103,13 @@
   color: #f00;
 }
 
-
-/* Logo alignment */
 .initial-header .logo, .main-header .logo {
     color: #fff;
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
     text-align: left;
-    margin-left: 20px; /* Optional: spacing from the left edge */
+    margin-left: 20px;
 }
 
         .hero {
@@ -155,7 +163,7 @@
 
         .milestone-value {
             font-size: 2rem;
-            color: var(--primary-red);
+            color: red;
             margin-bottom: 0.5rem;
         }
 
@@ -186,7 +194,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.5; /* Adjust opacity to make text readable */
+            opacity: 0.5;
             z-index: 1;
         }
         .cta .container {
@@ -210,6 +218,10 @@
         .cta-button:hover {
             background-color: #f4f4f4;
         }
+
+        .footer-links a:hover {
+            color: red;
+          }
 
         @media (max-width: 768px) {
             .section-grid {
@@ -259,16 +271,16 @@
         }
         
         .social-icons {
-            display: flex; /* Arrange items in a row */
-            justify-content: flex-end; /* Align items to the far right */
-            align-items: center; /* Align items vertically (optional) */
+            display: flex; 
+            justify-content: flex-end;
+            align-items: center;
         }
         
         .social-icons a {
             color: #fff;
             font-size: 20px;
-            margin-left: 15px; /* Spacing between icons */
-            text-decoration: none; /* Remove underline */
+            margin-left: 15px;
+            text-decoration: none;
         }
         
         .copyright {

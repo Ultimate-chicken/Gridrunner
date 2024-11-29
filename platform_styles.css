@@ -1,5 +1,4 @@
   /* PLATFORM */
-/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
@@ -38,8 +37,12 @@ body {
   }
   
   .btn-demo:hover {
-    background-color: #f00;
+    background-color: #8e0000;
     color: #fff;
+  }
+
+  .footer-links a:hover {
+    color: red;
   }
 
   .logo-image {
@@ -71,7 +74,6 @@ height: 80px;
 position: relative;
 }
 
-/* Ensure both headers use the same centering technique */
 .initial-header nav, .main-header nav {
 position: absolute;
 left: 50%;
@@ -93,14 +95,13 @@ color: #f00;
 }
 
 
-/* Logo alignment */
 .initial-header .logo, .main-header .logo {
 color: #fff;
 font-size: 24px;
 font-weight: bold;
 text-decoration: none;
 text-align: left;
-margin-left: 20px; /* Optional: spacing from the left edge */
+margin-left: 20px;
 }
 .red-line {
     width: 100px;
@@ -165,7 +166,7 @@ margin-left: 20px; /* Optional: spacing from the left edge */
 }
 
 .gr-btn-primary:hover {
-    background-color: red;
+    background-color: #8e0000;
 }
 
 .gr-btn-secondary {
@@ -185,7 +186,7 @@ margin-left: 20px; /* Optional: spacing from the left edge */
 }
 
 .gr-btn-outline:hover {
-    background-color: red;
+    background-color: #8e0000;
 }
 
 .gr-btn-lg {
@@ -531,7 +532,7 @@ footer {
 }
 
 .highlight {
-    color: red;
+    color: #8e0000;
 }
 
 /* CTA Section */
@@ -629,16 +630,16 @@ footer {
 }
 
 .social-icons {
-    display: flex; /* Arrange items in a row */
-    justify-content: flex-end; /* Align items to the far right */
-    align-items: center; /* Align items vertically (optional) */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .social-icons a {
     color: #fff;
     font-size: 20px;
-    margin-left: 15px; /* Spacing between icons */
-    text-decoration: none; /* Remove underline */
+    margin-left: 15px;
+    text-decoration: none;
 }
 
 .copyright {
@@ -647,3 +648,31 @@ footer {
     font-size: 14px;
     color: #666;
 }
+
+.btn-demo {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  
+  .btn-demo.active {
+    background-color: #8e0000;
+    color: #fff;
+  }
+
+  .btn-demo a {
+    text-decoration: none;
+  }
+
+  .btn-demo:hover {
+    background-color: #8e0000;
+    color: white;
+    border: 1px solid #8e0000;
+  }
