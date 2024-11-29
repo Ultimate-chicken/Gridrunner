@@ -155,8 +155,9 @@
 /* Title secrion */
 .contact-title {
     background-color: black;
+    text-align:center;
     width: 100%;
-    padding: 30px;
+    padding: 40px 0;
     margin-bottom: 30px;
 }
 
