@@ -32,6 +32,11 @@ const tabs = document.querySelectorAll('.tab');
             });
         }
 
+document.addEventListener("DOMContentLoaded", function() {
+            showPartner(0); // Show the first partner by default (index 0)
+        });
+
+
         // Contact tabs
         const contentTabs = document.querySelectorAll('.contentTab');
         const contentTabContent = document.querySelectorAll('.contentTabClass');
