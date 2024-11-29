@@ -32,31 +32,33 @@ const tabs = document.querySelectorAll('.tab');
             });
         }
 
-        // Default to showing the first partner
-        showPartner(0);
+        document.addEventListener("DOMContentLoaded", function() {
+            showPartner(0); // Show the first partner by default (index 0)
+        });
+
+        
 
         // Contact tabs
-        const contactTabs = document.querySelectorAll('.tab');
-        const contactTabContent = document.querySelectorAll('.tab-content');
-
-        contactTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
+        const contentTabs = document.querySelectorAll('.contentTab');
+        const contentTabContent = document.querySelectorAll('.contentTabClass');
+        
+        contentTabs.forEach(contentTab => {
+            contentTab.addEventListener('click', () => {
                 // Remove active class from all tabs
-                contactTabs.forEach(tab => tab.classList.remove('active'));
-
-                // Hide all tab contents
-                contactTabContent.forEach(content => content.classList.remove('active'));
-
+                contentTabs.forEach(tab => tab.classList.remove('active'));
+        
                 // Add active class to clicked tab
-                tab.classList.add('active');
-
+                contentTab.classList.add('active');
+                
+                // Hide all tab contents
+                contentTabContent.forEach(content => content.classList.remove('active'));
+        
+                // Add active class to clicked tab
+                contentTab.classList.add('active');
+        
                 // Show corresponding tab content
-                const activeTab = tab.getAttribute('data-tab');
+                const activeTab = contentTab.getAttribute('data-tab');
                 document.getElementById(activeTab).classList.add('active');
             });
-
-                // Initialize Lucide icons (ensure Lucide script is loaded)
-    if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-    }
         });
+        
