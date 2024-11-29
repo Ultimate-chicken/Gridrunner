@@ -724,107 +724,37 @@ footer {
         color: #8e0000;
     }
 
-        /* Contact Info Layout */
-        .contact-info {
-            font-size: 16px;
-            color: #666;
-        }
-    
-        .contact-info h2 {
-            font-size: 24px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 15px;
-        }
-    
-        .contact-info p {
-            margin-bottom: 10px;
-        }
-    
-        .contact-info a {
-            color: darkred;
-            text-decoration: none;
-            font-weight: 600;
-        }
-    
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-    
-        /* Form Fields */
-        .form-group {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-    
-        .form-group label {
-            font-size: 16px;
-            font-weight: 500;
-            color: #333;
-            margin-bottom: 8px;
-            display: block;
-        }
-    
-        /* New Form Row for Name and Email */
-        .form-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
-    
-        .form-row .form-group {
-            flex: 1;
-        }
-    
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 16px;
-            background-color: #fff;
-            transition: all 0.3s ease;
-        }
-    
-        .form-group input:focus,
-        .form-group textarea:focus {
-            border-color: darkred;
-            box-shadow: 0 0 5px darkred;
-            outline: none;
-        }
-    
-        /* Button Styling */
-        .contact-form button {
-            background-color: transparent;
-            color: darkred;
-            border: 1px solid darkred;
-            padding: 12px 24px;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            width: 100%;
-        }
-    
-        .contact-form button:hover {
-            background-color: darkred;
-            color: white;
-        }
-    
-        .contact-form h1 {
-            font-size: 36px;
-            font-weight: 600;
-            color: black;
-            text-align: center;
-        }
-    
-        .contact-form {
-            margin: 0rem 4rem;
-        }
+    /* General Layout */
+     .contact-us {
+        margin: 0 auto;
+        padding: 80px 0px;
+    }
 
-/* Problmatic section */
+    .contact-us p {
+        font-size: 18px;
+        color: #323232;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    /* Tab Navigation */
+
+    .contact-title {
+        background-color: black;
+        width: 100%;
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+
+    .contact-title h1 {
+        color:white;
+    }
+
+    .contact-title p{
+        color: #CCCCCC;
+    }
+
+    /* Problmatic section */
     .contactTabs {
         display: flex;
         justify-content: center;
@@ -861,4 +791,104 @@ footer {
 
     .contentTabClass.active {
         display: block;
+    }
+
+    /* Contact Info Layout */
+    .contact-info {
+        font-size: 16px;
+        color: #666;
+    }
+
+    .contact-info h2 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .contact-info p {
+        margin-bottom: 10px;
+    }
+
+    .contact-info a {
+        color: darkred;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .contact-info a:hover {
+        text-decoration: underline;
+    }
+
+    /* Form Fields */
+    .form-group {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    /* New Form Row for Name and Email */
+    .form-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .form-row .form-group {
+        flex: 1;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 16px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        border-color: darkred;
+        box-shadow: 0 0 5px darkred;
+        outline: none;
+    }
+
+    /* Button Styling */
+    .contact-form button {
+        background-color: transparent;
+        color: darkred;
+        border: 1px solid darkred;
+        padding: 12px 24px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        width: 100%;
+    }
+
+    .contact-form button:hover {
+        background-color: darkred;
+        color: white;
+    }
+
+    .contact-form h1 {
+        font-size: 36px;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+    }
+
+    .contact-form {
+        margin: 0rem 4rem;
     }
