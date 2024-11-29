@@ -1,0 +1,352 @@
+:root { 
+    /* Text colours*/
+    --description: #E2E8F0;
+
+    /*Background colors */
+    --black-bg: #1A1A1A;
+    --gray-bg: #262626;
+    --white-bg: #F1F1F1;
+    --blue-bg: #141539;
+    --lightblue-bg: #2B2C4C;
+    --dark-red-bg: #660000;
+
+    /* Gradient */
+    --blue-gradient-bg: linear-gradient(to right, #4772C9, #ffff);
+    --red-gradient-bg: linear-gradient(to right, #000000, #833434);
+    --gradient-txt: transparent;
+
+    /* Product colors*/
+    --core-section: #a0db8e;
+    --scale-section: #F09E2B;
+    --distributed-section: #7891FF;
+    --ultimate-section: #FF6262;
+    }
+
+    /* General configs */
+    html {
+        scroll-behavior: smooth;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Roboto';
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 0px;
+        padding: 15px;
+    }
+
+    a {
+        color: black; /* Default color */
+        text-decoration: none; /* Optional: removes underline */
+      }
+
+    .container {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+          }
+
+    /* Section related */
+    section {
+        padding-top: 80px;
+    }
+
+    .logo-image {
+        height: 70px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+    
+    .nav-link {
+        display: inline-block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        position: relative;
+        z-index: 10;
+    }
+    
+    .initial-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease-in-out;
+        background: linear-gradient(to bottom, #000 90%, rgba(102,0,0,1));
+    }
+    
+    .initial-header .container_head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      position: relative;
+    }
+    
+    /* Ensure both headers use the same centering technique */
+    .initial-header nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .initial-header nav a {
+      color: #fff;
+      text-decoration: 1px solid underline transparent;
+      padding: 10px;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+    
+    .initial-header nav a:hover {
+      color: #f00;
+    }
+
+.apply-button {
+    background-color: transparent;
+    border: 1px solid gray;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 300ms;
+}
+
+.apply-button a {
+    text-decoration: none;
+}
+
+.apply-button:hover {
+    background-color: #8e0000;
+    color: white;
+    border: 1px solid #8e0000;
+}
+
+/* MAIN PAGE */
+
+.contact-us {
+    padding: 20px;
+}
+ /* General Layout */
+ .contact-us p {
+    font-size: 18px;
+    color: #323232;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Title secrion */
+.contact-title {
+    background-color: black;
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-title h1 {
+    color:white;
+}
+
+.contact-title p{
+    color: #CCCCCC;
+}
+
+/* tabs */
+.contactTabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid darkred;
+}
+
+.contentTab {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    transition: background-color 0.3s;
+    color: black;
+    background-color: transparent;
+    text-align: center;
+}
+
+.contentTab.active {
+    color: darkred;
+    background-color: #fff;
+    border: 2px solid darkred; /* Applies to all four sides */
+    border-bottom: none; /* Removes the left border */
+}
+
+/* Tab Content */
+.contentTabClass {
+    display: none;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.contentTabClass.active {
+    display: block;
+}
+
+.contact-info {
+    font-size: 16px;
+    color: #666;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: darkred;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Form Fields */
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* New Form Row for Name and Email */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: darkred;
+    box-shadow: 0 0 5px darkred;
+    outline: none;
+}
+
+/* Button Styling */
+.contact-form button {
+    background-color: transparent;
+    color: darkred;
+    border: 1px solid darkred;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: darkred;
+    color: white;
+}
+
+.contact-form h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+}
+
+.contact-form {
+    margin: 0rem 4rem;
+}
+
+ /* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.social-icons {
+    display: flex; /* Arrange items in a row */
+    justify-content: flex-end; /* Align items to the far right */
+    align-items: center; /* Align items vertically (optional) */
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 15px; /* Spacing between icons */
+    text-decoration: none; /* Remove underline */
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}

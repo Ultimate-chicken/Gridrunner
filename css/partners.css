@@ -1,0 +1,346 @@
+:root { 
+    /* Text colours*/
+    --description: #E2E8F0;
+
+    /*Background colors */
+    --black-bg: #1A1A1A;
+    --gray-bg: #262626;
+    --white-bg: #F1F1F1;
+    --blue-bg: #141539;
+    --lightblue-bg: #2B2C4C;
+    --dark-red-bg: #660000;
+
+    /* Gradient */
+    --blue-gradient-bg: linear-gradient(to right, #4772C9, #ffff);
+    --red-gradient-bg: linear-gradient(to right, #000000, #833434);
+    --gradient-txt: transparent;
+
+    --core-section: #a0db8e;
+    --scale-section: #F09E2B;
+    --distributed-section: #7891FF;
+    --ultimate-section: #FF6262;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto';
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0px;
+    padding: 15px;
+}
+
+a {
+    color: black; /* Default color */
+    text-decoration: none; /* Optional: removes underline */
+  }
+
+.container {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+      }
+
+/* Section related */
+section {
+    padding-top: 100px;
+}
+
+#Partners {
+    background-color: var(--white-bg);
+}
+
+#Partners h1 {
+    background: var(--red-gradient-bg);
+    color: var(--gradient-txt);
+    background-clip: text;
+}
+
+/* Header styles */
+.container_head {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+   .btn-demo {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-demo:hover {
+    background-color: #f00;
+    color: #fff;
+  }
+
+  .logo-image {
+    height: 70px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 10;
+}
+
+.initial-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out;
+    background: linear-gradient(to bottom, #000 90%, rgba(102,0,0,1));
+}
+
+.initial-header .container_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  position: relative;
+}
+
+/* Ensure both headers use the same centering technique */
+.initial-header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.initial-header nav a {
+  color: #fff;
+  text-decoration: 1px solid underline transparent;
+  padding: 10px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.initial-header nav a:hover {
+  color: #f00;
+}
+
+/* Partner tabs */
+.company-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.company-button {
+    padding: 0.5rem 2rem;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, font-weight 0.3s;
+}
+
+.company-button.white {
+    background-color: transparent;
+    color: black;
+    border: 1px solid #ddd;
+}
+
+.company-button.red {
+    background-color: #000;
+    border: 1px solid #000;
+    color: white;
+    transform: scale(1.05); /* Slightly enlarges the active button */
+}
+
+.company-button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Partner Tab content*/
+.partner-card {
+    background-color: #000;
+    color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    display: none;
+}
+
+.partner-card.active {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .partner-card.active {
+        border-radius: 0px; 
+        margin: 0px 0px;
+        display: inline-flex;
+        flex-direction: column;
+    }
+}
+
+.partner-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.partners-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.partners-item {
+    margin: 15px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--dark-red-bg);
+}
+
+.partner-card h3 {
+    margin: 0px;
+}
+
+.partner-card p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* Statistics */
+.stats {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+    display: flex;
+}
+
+.stat-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color:darkred;
+}
+
+/* Apply to Network */
+.cta-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 30px;
+    height: 85vh;  
+    display: flex;
+    justify-content: space-around;  /* Horizontally centers the content */
+    align-items: center;  
+}
+
+.cta-section div {
+    flex-direction: column;
+
+}
+
+.cta-section h2 {
+    margin-bottom: 0.5rem;
+}
+
+.cta-section p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.apply-button {
+    background-color: transparent;
+    border: 1px solid gray;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 300ms;
+}
+
+.apply-button a {
+    text-decoration: none;
+}
+
+.apply-button:hover {
+    background-color: #8e0000;
+    color: white;
+    border: 1px solid #8e0000;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.social-icons {
+    display: flex; /* Arrange items in a row */
+    justify-content: flex-end; /* Align items to the far right */
+    align-items: center; /* Align items vertically (optional) */
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 15px; /* Spacing between icons */
+    text-decoration: none; /* Remove underline */
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
